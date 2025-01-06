@@ -131,8 +131,9 @@ function filterButtons() {
     <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar  )</button>
     <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
     <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
+    <button onclick="showSection('re6a')" style="background-color:#FF9800;">🚧 RE6a (DB Regio) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re14b')" style="background-color:#FF9800;">🚧 RE14b (DB Regio) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('re40')" style="background-color:#FF9800;">🚧 RE40 (DB Regio) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('re40')">RE40 (DB Regio) Ansagen</button>
     <button onclick="showSection('rb76')" style="background-color:#FF9800;">🚧 RB76 (HHB) Ansagen 🚧 (Im Bau)</button>
   </div>
 
@@ -406,6 +407,13 @@ function filterButtons() {
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
+  <!-- RE6a -->
+  <div id="re6a" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 RE6a (DB Regio) Ansagen</h2>
+    <p>Im Bau – bald verfügbar!</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
   <!-- RE14b -->
   <div id="re14b" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 RE14b (DB Regio) Ansagen</h2>
@@ -414,9 +422,8 @@ function filterButtons() {
   </div>
 
   <!-- RE40 -->
-  <div id="re40" class="container" style="display:none; background-color:#FF9800; color:#fff;">
-    <h2>🚧 RE40 (DB Regio) [BETA] Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <div id="re40" class="container" style="display:none;">
+    <h2>RE40 (DB Regio) Ansagen</h2>
 
 <div class="label">Karlsruhe Hauptbahnhof</div>
 <button onclick="playAnsage('KA(RE40)links')">Karlsruhe Hbf (Fahrtende) Ausstieg links</button>
@@ -427,6 +434,49 @@ function filterButtons() {
 <div class="label">Rastatt</div>
 <button onclick="playAnsage('Rastatt(RE40)links')">Rastatt - Ausstieg links</button>
 <button onclick="playAnsage('Rastatt(RE40)rechts')">Rastatt - Ausstieg rechts</button>
+
+<div class="label">Gaggenau</div>
+<button onclick="playAnsage('Gaggenau(RE40)links')">Gaggenau - Ausstieg links</button>
+<button onclick="playAnsage('Gaggenau(RE40)rechts')">Gaggenau - Ausstieg rechts</button>
+
+<div class="label">Gernsbach</div>
+<button onclick="playAnsage('Gernsbach(RE40)links')">Gernsbach - Ausstieg links</button>
+<button onclick="playAnsage('Gernsbach(RE40)rechts')">Gernsbach - Ausstieg rechts</button>
+
+<div class="label">Weisenbach</div>
+<button onclick="playAnsage('Weisenbach(RE40)links')">Weisenbach - Ausstieg links</button>
+<button onclick="playAnsage('Weisenbach(RE40)rechts')">Weisenbach - Ausstieg rechts</button>
+
+<div class="label">Forbach (Schwarzwald)</div>
+<button onclick="playAnsage('Forbach(RE40)links')">Forbach - Ausstieg links</button>
+<button onclick="playAnsage('Forbach(RE40)rechts')">Forbach - Ausstieg rechts</button>
+
+<div class="label">Schönmünzach</div>
+<button onclick="playAnsage('Schönmünzach(RE40)links')">Schönmünzach - Ausstieg links</button>
+<button onclick="playAnsage('Schönmünzach(RE40)rechts')">Schönmünzach - Ausstieg rechts</button>
+
+<div class="label">Baiersbronn</div>
+<button onclick="playAnsage('Baiersbronn(RE40)links')">Baiersbronn - Ausstieg links</button>
+<button onclick="playAnsage('Baiersbronn(RE40)rechts')">Baiersbronn - Ausstieg rechts</button>
+
+<div class="label">Freudenstadt Stadt</div>
+<button onclick="playAnsage('FDS-Stadt(RE40)links')">Stadtbahnhof - Ausstieg links</button>
+<button onclick="playAnsage('FDS-Stadt(RE40)rechts')">Stadtbahnhof - Ausstieg rechts</button>
+
+<div class="label">Freudenstadt Schulzentrum</div>
+<button onclick="playAnsage('FDS-Schul(RE40)links')">Schulzentrum - Ausstieg links</button>
+<button onclick="playAnsage('FDS-Schul(RE40)rechts')">Schulzentrum - Ausstieg rechts</button>
+
+<div class="label">Freudenstadt Industriegebiet</div>
+<button onclick="playAnsage('FDS-Industrie(RE40)links')">Industriegebiet - Ausstieg links</button>
+<button onclick="playAnsage('FDS-Industrie(RE40)rechts')">Industriegebiet - Ausstieg rechts</button>
+
+<div class="label">Freudenstadt Hbf</div>
+<button onclick="playAnsage('FDS(RE40)links')">Freudenstadt - Ausstieg links</button>
+<button onclick="playAnsage('FDS(RE40)rechts')">Freudenstadt - Ausstieg rechts</button>
+<p><p/>
+<button onclick="playAnsage('FDS-Begrüßung(RE40)')">Freudenstadt Hbf - Begrüßung</button>
+
 
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
