@@ -139,8 +139,6 @@ function filterButtons() {
 <!-- Info-Ansagen -->
   <div id="info" class="container" style="display:none;">
     <h2>Informations-Ansagen</h2>
-    <button onclick="playAnsage('Fahrplanwechsel 2025')">Fahrplanwechsel Dezember-2025</button>
-    <p><p/>
     <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
     <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
     <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
@@ -417,8 +415,19 @@ function filterButtons() {
 
   <!-- RE40 -->
   <div id="re40" class="container" style="display:none; background-color:#FF9800; color:#fff;">
-    <h2>🚧 RE40 (DB Regio) Ansagen</h2>
+    <h2>🚧 RE40 (DB Regio) [BETA] Ansagen</h2>
     <p>Im Bau – bald verfügbar!</p>
+
+<div class="label">Karlsruhe Hauptbahnhof</div>
+<button onclick="playAnsage('KA(RE40)links')">Karlsruhe Hbf (Fahrtende) Ausstieg links</button>
+<button onclick="playAnsage('KA(RE40)rechts')">Karlsruhe Hbf (Fahrtende) Ausstieg rechts</button>
+<p><p/>
+<button onclick="playAnsage('RE40BegrüßungKA')">Karlsruhe Hbf (Begrüßung)</button>
+
+<div class="label">Rastatt</div>
+<button onclick="playAnsage('Rastatt(RE40)links')">Rastatt - Ausstieg links</button>
+<button onclick="playAnsage('Rastatt(RE40)rechts')">Rastatt - Ausstieg rechts</button>
+
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
