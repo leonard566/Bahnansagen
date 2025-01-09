@@ -97,8 +97,20 @@
      color: #888;
      margin-top: 22px;
     }
+ 
+    .im-bau {
+     background-color: #ff9800;
+     color: white;
+     cursor: not-allowed;
+     opacity: 0.85;
+    }
+
+    .im-bau::after {
+    content: " 🚧";
+    }
 
   </style>
+
 
 </head>
 
@@ -190,7 +202,7 @@ function filterButtons() {
 
  <!-- S32 -->
   <div id="s32" class="container" style="display:none;">
-    <h2>S31 (AVG) Ansagen</h2>
+    <h2>S32 (AVG) Ansagen</h2>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
     <button onclick="playAnsage('Menzingen (Fahrtende)')">Menzingen (Fahrtende)</button>
     <button onclick="playAnsage('Bahnbrücken')">Bahnbrücken (Bedarf)</button>
@@ -274,9 +286,28 @@ function filterButtons() {
   </div>
 
   <!-- S6 -->
-  <div id="s6" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+  <div id="s6" class="container" style="display:none; background-color:#FFF3E0; color:#fff;">
     <h2>🚧 S6 (AVG) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen folgen schon in Kürze!</b></p>
+    <button disabled class="im-bau" disabled>🚧 Pforzheim Hbf (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Pforzheim Maihälden (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Brötzingen Mitte (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Brötzingen Sandweg (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Brötzingen Wohnlichstraße (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Birkenfeld (Württ) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Süd (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Freibad (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Rotenbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Eyachbrücke (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Höfen (Enz) Nord (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Höfen (Enz) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Calmbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Calmbach Süd (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Nord (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Bad Wildbad (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Uhlandplatz (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Kurpark (Im Bau)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -352,7 +383,7 @@ function filterButtons() {
     <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
-    <p>Hauptbahnhof🚧</p>
+    <button disabled class="im-bau" disabled>🚧 Hauptbahnhof (Im Bau)</button>
     <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
     <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
     <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
@@ -411,6 +442,13 @@ function filterButtons() {
   <div id="re6a" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 RE6a (DB Regio) Ansagen</h2>
     <p>Im Bau – bald verfügbar!</p>
+    <p>Der Abschnitt Balingen - Aulendorf benötigt noch eine Weile!</p>
+    <button disabled class="im-bau" disabled>🚧 Stuttgart Hbf (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Reutlingen Hbf (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Tübingen Hbf (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Mössingen (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Hechingen (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Balingen (Württ) (Im Bau)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -481,10 +519,11 @@ function filterButtons() {
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
-  <!-- RE76 -->
-  <div id="re76" class="container" style="display:none; background-color:#FF9800; color:#fff;">
-    <h2>🚧 RE76 (HHB) Ansagen</h2>
+  <!-- RB76 -->
+  <div id="rb76" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 RB76 (HHB) Ansagen</h2>
     <p>Im Bau – bald verfügbar!</p>
+    <p>Voraussichtlich im Februar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -495,7 +534,16 @@ function filterButtons() {
 
     <h3>Verfügbare Ansagen</h3>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
-
+    <button disabled class="im-bau" disabled>🚧 Ittersbach Rathaus (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Ittersbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Ittersbach Industrie (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Spielberg (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Langensteinbach St. Barbara (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Langensteinbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Langensteinbach Schießhüttenäcker (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Reichenbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Reichenbach Kurpark (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Busenbach (Im Bau)</button>
     <button onclick="playAnsage('Ettlingen Spinnerei')">Ettlingen Spinnerei</button>
     <button onclick="playAnsage('Ettlingen Albgaubad')">Ettlingen Albgaubad</button>
     <button onclick="playAnsage('Ettlingen Albgaubad (Fahrtende)')">Ettlingen Albgaubad (Fahrtende)</button>
@@ -511,7 +559,7 @@ function filterButtons() {
     <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
-    <p>Hauptbahnhof🚧</p>
+    <button disabled class="im-bau" disabled>🚧 Hauptbahnhof (Im Bau)</button>
     <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
     <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
     <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
