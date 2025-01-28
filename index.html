@@ -145,7 +145,7 @@ function filterButtons() {
     <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
     <button onclick="showSection('re6a')" style="background-color:#FF9800;">🚧 RE6a (DB Regio) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re14b')" style="background-color:#FF9800;">🚧 RE14b (DB Regio) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('re40')">RE40 (DB Regio) Ansagen</button>
+    <button onclick="showSection('re40')" style="background-color:#C084FF;">RE40 (DB Regio) [BETA] Ansagen</button>
     <button onclick="showSection('rb76')" style="background-color:#FF9800;">🚧 RB76 (HHB) Ansagen 🚧 (Im Bau)</button>
   </div>
 
@@ -432,9 +432,75 @@ function filterButtons() {
   </div>
 
   <!-- S8 -->
-  <div id="s8" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+<div id="s8" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S8 (AVG) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+<h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button disabled class="im-bau" disabled>🚧 Bondorf (b. Herrenberg) (Im Bau)</button>    
+    <button onclick="playAnsage('Ergenzingen (Bedarf)')">Ergenzingen (Bedarf)</button>
+    <button onclick="playAnsage('Eutingen')">Eutingen im Gäu</button>
+    <button disabled class="im-bau" disabled>🚧 Eutingen Nord (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Hochdorf (b. Horb) (Im Bau)</button>
+    <button onclick="playAnsage('Horb Heiligenfeld (Bedarf)')">Horb Heiligenfeld (Bedarf)</button>
+    <button onclick="playAnsage('Bittelbronn')">Bittelbronn</button>
+    <button onclick="playAnsage('Schopfloch')">Schopfloch (b. FDS)</button>
+    <button onclick="playAnsage('Dornstetten')">Dornstetten</button>
+    <button onclick="playAnsage('Dornstetten-Aach')">Dornstetten-Aach</button>
+    <button disabled class="im-bau" disabled>🚧 Grüntal-Wittlensweiler (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Freudenstadt Hbf (Im Bau)</button>    
+    <button onclick="playAnsage('FDS IndustrieS')">FDS Industriegebiet/Schmidt</button>
+    <button onclick="playAnsage('FDS SchulP')">FDS Schulzentrum/Panoramabad</button>
+    <button onclick="playAnsage('FDS Stadt')">Freudenstadt Stadt</button>
+    <button onclick="playAnsage('Friedrichstal (Bedarf)')">Friedrichstal (Murgtal) (Bedarf)</button>
+    <button disabled class="im-bau" disabled>🚧 Baiersbronn (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Baiersbronn Schule (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Klosterreichenbach (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Heselbach (Im Bau)</button>
+    <button onclick="playAnsage('Röt (Bedarf)')">Röt (Bedarf)</button>
+    <button onclick="playAnsage('Huzenbach (Bedarf)')">Huzenbach (Bedarf)</button>
+    <button onclick="playAnsage('Schwarzenberg (Bedarf)')">Schwarzenberg (Bedarf)</button>
+    <button disabled class="im-bau" disabled>🚧 Schönmünzach (Im Bau)</button>
+    <button onclick="playAnsage('Kirschbaumwasen (Bedarf)')">Kirschbaumwasen (Bedarf)</button>
+    <button disabled class="im-bau" disabled>🚧 Raumünzach (Im Bau)</button>
+    <button onclick="playAnsage('Forbach (Fahrtende)')">Forbach (Schw.) (Fahrtende)</button>
+    <button onclick="playAnsage('Forbach im Schw')">Forbach (Schwarzwald)</button>
+    <button onclick="playAnsage('Gausbach (Bedarf)')">Gausbach (Bedarf)</button>
+    <button onclick="playAnsage('Langenbrand (Bedarf)')">Langenbrand (Bedarf)</button>
+    <button disabled class="im-bau" disabled>🚧 Au im Murgtal (Im Bau)</button>
+    <button onclick="playAnsage('Weisenbach')">Weisenbach</button>
+    <button disabled class="im-bau" disabled>🚧 Hilpertsau (Im Bau)</button>
+    <button onclick="playAnsage('Obertsrot (Bedarf)')">Obertsrot (Bedarf)</button>
+    <button onclick="playAnsage('Gernsbach Mitte')">Gernsbach Mitte</button>
+    <button disabled class="im-bau" disabled>🚧 Gernsbach (Im Bau)</button>
+    <button onclick="playAnsage('Hörden')">Hörden</button>
+    <button onclick="playAnsage('Ottenau (Bedarf)')">Ottenau (Bedarf)</button>
+    <button onclick="playAnsage('Gaggenau Mercedes (Bedarf)')">Gaggenau Mercedes-B-W (Bedarf)</button>
+    <button onclick="playAnsage('Gaggenau')">Gaggenau</button>
+    <button onclick="playAnsage('Bad Rotenfels Weinbrennerstr')">Bad Rotenfels Weinbrennerstr</button>
+    <button onclick="playAnsage('Bad Rotenfels')">Bad Rotenfels/Rotherma</button>
+    <button onclick="playAnsage('Bad Rotenfels Schloss')">Bad Rotenfels Schloss</button>
+    <button onclick="playAnsage('Bischweier')">Bischweier</button>
+    <button onclick="playAnsage('Kuppenheim')">Kuppenheim</button>
+    <button onclick="playAnsage('Rastatt Beinle (Bedarf)')">Rastatt Beinle (Bedarf)</button>
+    <button onclick="playAnsage('Rastatt(KA)(S8)')">Rastatt</button>
+    <button onclick="playAnsage('Ötigheim')">Ötigheim</button>
+    <button onclick="playAnsage('Bietigheim')">Bietigheim (Baden)</button>
+    <button onclick="playAnsage('Durmersheim (S8)')">Durmersheim</button>
+    <button onclick="playAnsage('Durmersheim Nord')">Durmersheim Nord</button>
+    <button onclick="playAnsage('Forchheim (KA)')">Forchheim (b. KA)</button>
+    <button disabled class="im-bau" disabled>🚧 KA Albtalbahnhof (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 KA Hbf Vorplatz (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Poststraße (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Augartenstraße (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Kongresszentrum (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Ettlinger Tor (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Marktplatz (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Kronenplatz (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Durlacher Tor/KIT (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Gottesauer Platz/BGV (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Tullastraße (Im Bau)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -460,8 +526,8 @@ function filterButtons() {
   </div>
 
   <!-- RE40 -->
-    <div id="re40" class="container" style="display:none;">
-    <h2>RE40 (DB Regio) Ansagen</h2>
+  <div id="re40" class="container" style="display:none; background-color:#C084FF; color:#fff;">
+    <h2>RE40 (DB Regio) BETA-Ansagen</h2>
 
 <div class="label">Karlsruhe Hauptbahnhof</div>
 <button onclick="playAnsage('KA(RE40)links')">Karlsruhe Hbf (Fahrtende) Ausstieg links</button>
@@ -642,7 +708,7 @@ updateCountdowns();
 </div>
 
   <footer>
-    &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
+    &copy; 2026 Leonard Klinger – Alle Rechte vorbehalten.
   </footer>
 
   <audio id="gong" src="./avg-gong1.mp3"></audio>
