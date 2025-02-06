@@ -288,26 +288,30 @@ function filterButtons() {
   <!-- S6 -->
   <div id="s6" class="container" style="display:none; background-color:#FFF3E0; color:#fff;">
     <h2>🚧 S6 (AVG) Ansagen</h2>
-    <p style="color:#E65100;"><b>Im Bau – einige Ansagen folgen schon in Kürze!</b></p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
     <button disabled class="im-bau" disabled>🚧 Pforzheim Hbf (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Pforzheim Maihälden (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Brötzingen Mitte (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Brötzingen Sandweg (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Brötzingen Wohnlichstraße (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Birkenfeld (Württ) (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Süd (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Freibad (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Rotenbach (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Neuenbürg (Württ) Eyachbrücke (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Höfen (Enz) Nord (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Höfen (Enz) (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Calmbach (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Calmbach Süd (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Nord (Im Bau)</button>
+    <button onclick="playAnsage('Pf-Maihälden (Bedarf)')">Pforzheim Maihälden (Bedarf)</button>
+    <button onclick="playAnsage('Br-Mitte (Bedarf)')">Brötzingen Mitte (Bedarf)</button>
+    <button onclick="playAnsage('Br Sandweg (Bedarf)')">Brötzingen Sandweg (Bedarf)</button>
+    <button onclick="playAnsage('Br-Wohnl. (Bedarf)')">Brötzingen Wohnlichstr. (Bedarf)</button>
+    <button onclick="playAnsage('Birkenfeld (Württ) (Bedarf)')">Birkenfeld (Württ) (Bedarf)</button>
+    <button onclick="playAnsage('Neuenbürg (Enz) (Bedarf)')">Neuenbürg (Enz) (->Bad Wildbad)</button>
+    <button onclick="playAnsage('Neuenbürg (Enz) (Ri Pf)')">Neuenbürg (Enz) (->Pforzheim)</button>
+    <button onclick="playAnsage('Neuenbürg Süd')">Neuenbürg Süd (Bedarf)</button>
+    <button onclick="playAnsage('Neuenbürg Freibad (Bedarf)')">Neuenbürg Freibad (Bedarf)</button>
+    <button onclick="playAnsage('Rotenbach (Bedarf')">Rotenbach (Bedarf)</button>
+    <button onclick="playAnsage('Neuenbürg Eyachbr. (Bedarf)')">Neuenb. Eyachbr. (Bedarf) (->Bad Wildbad)</button>
+    <button onclick="playAnsage('Neuenbürg Eyachbr. (Bedarf) (Ri Pf)')">Neuenb. Eyachbr. (Bedarf) (->Pforzheim)</button>
+    <button onclick="playAnsage('Höfen Nord (Bedarf)')">Höfen Nord (Bedarf)</button>
+    <button onclick="playAnsage('Höfen (Enz) (Bedarf)')">Höfen (Enz) (Bedarf) (->Bad Wildbad)</button>
+    <button onclick="playAnsage('Höfen (Enz) (Bedarf) (Ri Pf)')">Höfen (Enz) (Bedarf) (->Pforzheim)</button>
+    <button onclick="playAnsage('Calmbach')">Calmbach</button>
+    <button onclick="playAnsage('Calmbach Süd (Bedarf)')">Calmbach Süd (Bedarf)</button>
+    <button onclick="playAnsage('Bad Wildbad Nord (Bedarf)')">Bad Wildbad Nord (Bedarf)</button>
     <button disabled class="im-bau" disabled>🚧 Bad Wildbad (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Uhlandplatz (Im Bau)</button>
-    <button disabled class="im-bau" disabled>🚧 Bad Wildbad Kurpark (Im Bau)</button>
+    <button onclick="playAnsage('Bad Wildbad Uhlandplatz (Bedarf)')">Bad Wildbad Uhlandplatz (Bedarf)</button>
+    <button onclick="playAnsage('Bad Wildbad Kurpark')">Bad Wildbad Kurpark (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
