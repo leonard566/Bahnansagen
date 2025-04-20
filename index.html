@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zug-Ansagen System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8em;
+      color: #444;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 80%;
+      max-width: 350px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #777; /* Grau */
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎤 Zug-Ansagen System</h1>
+  
+  <!-- Hauptbildschirm -->
+  <div id="main-menu" class="container">
+    <button onclick="showInfo()">Informations Ansagen</button>
+    <button onclick="showS31()">S31 Ansagen</button>
+  </div>
+
+  <!-- Informations Ansagen -->
+  <div id="info" class="container" style="display:none;">
+    <h2>Wählen Sie eine Ansage:</h2>
+    <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
+    <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
+    <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
+    <button onclick="playAnsage('Verspätung 20')">Verspätung 20 Minuten</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
+  </div>
+
+  <!-- S31 Ansagen -->
+  <div id="s31" class="container" style="display:none;">
+    <h2>Wählen Sie eine S31 Ansage:</h2>
+    <button onclick="playAnsage('Baustelle - Fahrtende')">Baustelle - Fahrtende</button>
+    <button onclick="playAnsage('Fahrtausfall')">Fahrtausfall</button>
+    <button onclick="playAnsage('Streckenabschnitt durch Zug belegt')">Streckenabschnitt durch Zug belegt</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="audio"></audio>
+
+  <script>
+    function playAnsage(datei) {
+      const audio = document.getElementById("audio");
+      audio.src = datei + ".mp3";
+      audio.play();
+    }
+
+    function showInfo() {
+      document.getElementById("main-menu").style.display = "none";
+      document.getElementById("info").style.display = "block";
+      document.getElementById("s31").style.display = "none";
+    }
+
+    function showS31() {
+      document.getElementById("main-menu").style.display = "none";
+      document.getElementById("s31").style.display = "block";
+      document.getElementById("info").style.display = "none";
+    }
+
+    function backToMenu() {
+      document.getElementById("main-menu").style.display = "block";
+      document.getElementById("info").style.display = "none";
+      document.getElementById("s31").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
