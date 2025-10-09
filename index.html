@@ -77,10 +77,20 @@
   <h1>🎤 Zug-Ansagen System</h1>
   
   <!-- Hauptbildschirm -->
-  <div id="main-menu" class="container">
-    <button onclick="showInfo()">Informations-Ansagen</button>
-    <button onclick="showS31()">S31 (AVG) Ansagen</button>
-  </div>
+<div id="main-menu" class="container">
+  <button onclick="showInfo()">Informations-Ansagen</button>
+  <button onclick="showS31()">S31 (AVG) Ansagen</button>
+  <button onclick="showS5()" style="background-color: #FF9800; cursor: not-allowed;">
+    🚧 S5 (AVG) Ansagen 🚧(Im Bau)
+  </button>
+</div>
+
+<!-- S5 Ansagen (Im Bau) -->
+<div id="s5" class="container" style="display:none; background-color:#FF9800; color:#fff; text-align:center;">
+  <h2>🚧S5 (AVG) Ansagen🚧</h2>
+  <p>Im Bau - noch nicht verfügbar</p>
+  <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
+</div>
 
   <!-- Informations Ansagen -->
   <div id="info" class="container" style="display:none;">
@@ -158,11 +168,12 @@
       }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
-    function showInfo() {
-      document.getElementById("main-menu").style.display = "none";
-      document.getElementById("info").style.display = "block";
-      document.getElementById("s31").style.display = "none";
-    }
+    function showS5() {
+  document.getElementById("main-menu").style.display = "none";
+  document.getElementById("s31").style.display = "none";
+  document.getElementById("info").style.display = "none";
+  document.getElementById("s5").style.display = "block";
+}
 
     function showS31() {
       document.getElementById("main-menu").style.display = "none";
