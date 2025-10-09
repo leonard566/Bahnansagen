@@ -134,7 +134,7 @@
   </div>
 
   <!-- Audio Elemente -->
-  <audio id="gong" src="avg-gong.mp3"></audio>
+  <audio id="gong" src="./avg-gong.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
@@ -148,7 +148,7 @@
 
       // Wenn der Gong fertig ist, starte die Ansage
       gong.onended = () => {
-        audio.src = datei + ".mp3";
+        audio.src = "./" datei + ".mp3";
         audio.play();
       };
     }
