@@ -59,7 +59,7 @@
     .back-button {
       margin-top: 30px;
       padding: 12px 25px;
-      background-color: #777; /* Grau */
+      background-color: #777;
       border-radius: 8px;
       color: white;
       font-size: 18px;
@@ -78,7 +78,7 @@
   
   <!-- Hauptbildschirm -->
   <div id="main-menu" class="container">
-    <button onclick="showInfo()">Informations Ansagen</button>
+    <button onclick="showInfo()">Informations-Ansagen</button>
     <button onclick="showS31()">S31 (AVG) Ansagen</button>
   </div>
 
@@ -134,23 +134,28 @@
   </div>
 
   <!-- Audio Elemente -->
-  <audio id="gong" src="./avg-gong.mp3"></audio>
+  <audio id="gong" src="./avg.gong.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
+    // Browser-Blockierung umgehen: Erstklick aktiviert Audio
+    document.body.addEventListener("click", () => {
+      const gong = document.getElementById("gong");
+      gong.play().then(() => gong.pause());
+    }, { once: true });
+
     function playAnsage(datei) {
       const gong = document.getElementById("gong");
       const audio = document.getElementById("audio");
 
       // Erst Gong abspielen
       gong.currentTime = 0;
-      gong.play();
-
-      // Wenn der Gong fertig ist, starte die Ansage
-      gong.onended = () => {
-        audio.src = "./" datei + ".mp3";
-        audio.play();
-      };
+      gong.play().then(() => {
+        gong.onended = () => {
+          audio.src = "./" + datei + ".mp3";
+          audio.play().catch(err => console.log("Fehler beim Abspielen:", err));
+        };
+      }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
     function showInfo() {
