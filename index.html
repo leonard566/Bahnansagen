@@ -79,7 +79,7 @@
   <!-- Hauptbildschirm -->
   <div id="main-menu" class="container">
     <button onclick="showInfo()">Informations Ansagen</button>
-    <button onclick="showS31()">S31 Ansagen</button>
+    <button onclick="showS31()">S31 (AVG) Ansagen</button>
   </div>
 
   <!-- Informations Ansagen -->
@@ -89,20 +89,52 @@
     <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
     <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
     <button onclick="playAnsage('Verspätung 20')">Verspätung 20 Minuten</button>
+    <button onclick="playAnsage('Ärztlicher Notfall')">Ärztlicher Notfall</button>
+    <button onclick="playAnsage('Baustelle - Fahrtende')">Baustelle - Fahrtende</button>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button onclick="playAnsage('Fahrtausfall')">Fahrtausfall</button>
+    <button onclick="playAnsage('Fahrtende (Normal)')">Fahrtende (Normal)</button>
+    <button onclick="playAnsage('Fahrzeugstörung - Verzögerung')">Fahrzeugstörung - Verzögerung</button>
+    <button onclick="playAnsage('Gegenzug')">Gegenzug</button>
+    <button onclick="playAnsage('Hinterer Zugteil endet')">Hinterer Zugteil endet</button>
+    <button onclick="playAnsage('Notbremse')">Notbremse</button>
+    <button onclick="playAnsage('Störung - Verzögerung')">Störung - Verzögerung</button>
+    <button onclick="playAnsage('Streckenabschnitt durch Zug belegt')">Streckenabschnitt durch Zug belegt</button>
+    <button onclick="playAnsage('Streckensperrung - Fahrtende')">Streckensperrung - Fahrtende</button>
+    <button onclick="playAnsage('Türstörung - Verzögerung')">Türstörung - Verzögerung</button>
+    <button onclick="playAnsage('Überholung')">Überholung</button>
+    <button onclick="playAnsage('Unfall - Fahrtende')">Unfall - Fahrtende</button>
+    <button onclick="playAnsage('Unfall - weiter SEV')">Unfall - weiter SEV</button>
+    <button onclick="playAnsage('Vorderer Zugteil endet')">Vorderer Zugteil endet</button>
+    <button onclick="playAnsage('Warten auf anderen Zug')">Warten auf anderen Zug</button>
     <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
 
   <!-- S31 Ansagen -->
   <div id="s31" class="container" style="display:none;">
     <h2>Wählen Sie eine S31 Ansage:</h2>
-    <button onclick="playAnsage('Baustelle - Fahrtende')">Baustelle - Fahrtende</button>
-    <button onclick="playAnsage('Fahrtausfall')">Fahrtausfall</button>
-    <button onclick="playAnsage('Streckenabschnitt durch Zug belegt')">Streckenabschnitt durch Zug belegt</button>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button onclick="playAnsage('Odenheim (Fahrtende)')">Odenheim (Fahrtende)</button>
+    <button onclick="playAnsage('Odenheim West (Bedarf)')">Odenheim West (Bedarf)</button>
+    <button onclick="playAnsage('Zeutern Ost (Bedarf)')">Zeutern Ost (Bedarf)</button>
+    <button onclick="playAnsage('Zeutern')">Zeutern</button>
+    <button onclick="playAnsage('Zeutern Sportplatz (Bedarf)')">Zeutern Sportplatz (Bedarf)</button>
+    <button onclick="playAnsage('Stettfeld')">Stettfeld</button>
+    <button onclick="playAnsage('Ubstadt Uhlandstraße')">Ubstadt Uhlandstraße</button>
+    <button onclick="playAnsage('Ubstadt Ort')">Ubstadt Ort</button>
+    <button onclick="playAnsage('Bruchsal Stegwiesen (Bedarf)')">Bruchsal Stegwiesen (Bedarf)</button>
+    <button onclick="playAnsage('Bruchsal Schlossgarten (Bedarf)')">Bruchsal Schlossgarten (Bedarf)</button>
+    <button onclick="playAnsage('Bruchsal Bf')">Bruchsal Bahnhof</button>
+    <button onclick="playAnsage('Bruchsal GBZ (Bedarf)')">Bruchsal GBZ (Bedarf)</button>
+    <button onclick="playAnsage('Untergrombach')">Untergrombach</button>
+    <button onclick="playAnsage('Weingarten (Baden)')">Weingarten (Baden)</button>
+    <button onclick="playAnsage('Karlsruhe-Durlach')">Karlsruhe-Durlach</button>
+    <button onclick="playAnsage('Karlsruhe Hbf (Fahrtende)')">Karlsruhe Hbf (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
 
   <!-- Audio Elemente -->
-  <audio id="gong" src="avg.gong.mp3"></audio>
+  <audio id="gong" src="avg-gong.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
