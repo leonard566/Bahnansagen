@@ -101,14 +101,24 @@
     <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
 
-  <!-- Audio Element -->
+  <!-- Audio Elemente -->
+  <audio id="gong" src="avg.gong.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
     function playAnsage(datei) {
+      const gong = document.getElementById("gong");
       const audio = document.getElementById("audio");
-      audio.src = datei + ".mp3";
-      audio.play();
+
+      // Erst Gong abspielen
+      gong.currentTime = 0;
+      gong.play();
+
+      // Wenn der Gong fertig ist, starte die Ansage
+      gong.onended = () => {
+        audio.src = datei + ".mp3";
+        audio.play();
+      };
     }
 
     function showInfo() {
