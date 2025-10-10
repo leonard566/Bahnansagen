@@ -185,10 +185,11 @@
       }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
-    function showinfo() {
-  document.getElementById("main-menu").style.display = "none";
-  document.getElementById("info").style.display = "none";
-}
+    function showInfo() {
+      document.getElementById("main-menu").style.display = "none";
+      document.getElementById("info").style.display = "block";
+      document.getElementById("s31").style.display = "none";
+      document.getElementById("s32").style.display = "none";
     }
 
     function showS32() {
