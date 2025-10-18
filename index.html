@@ -17,7 +17,6 @@
       box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
     }
 
-
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -85,33 +84,23 @@
     }
   </style>
 </head>
-<footer>
- &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
-</footer>
+
 <body>
-
   <h1>🎤 Zug-Ansagen System</h1>
-  
-  <!-- Hauptbildschirm -->
-<div id="main-menu" class="container">
-  <button onclick="showInfo()">Informations-Ansagen</button>
-  <button onclick="showS31()">S31 (AVG) Ansagen</button>
-  <button onclick="showS32()" style="background-color: #FF9800; cursor: not-allowed;">
-    🚧 S32 (AVG) Ansagen 🚧(Im Bau)
-  </button>
-</div>
 
-<!-- S32 Ansagen (Im Bau) -->
-<div id="s32" class="container" style="display:none; background-color:#FF9800; color:#fff; text-align:center;">
-  <h2>🚧S32 (AVG) Ansagen🚧</h2>
-  <p>Im Bau - noch nicht verfügbar</p>
-  <p>Seite neu laden zum verschwinden dieses Banners!</p>
-  <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
-</div>
+  <!-- Hauptmenü -->
+  <div id="main-menu" class="container">
+    <button onclick="showInfo()">Informations-Ansagen</button>
+    <button onclick="showS31()">S31 (AVG) Ansagen</button>
+    <button onclick="showS32()">S32 (AVG) Ansagen</button>
+    <button onclick="showS5()" style="background-color: #FF9800; cursor: not-allowed;">
+      🚧 S5 (AVG) Ansagen 🚧 (Im Bau)
+    </button>
+  </div>
 
-  <!-- Informations Ansagen -->
+  <!-- Info-Ansagen -->
   <div id="info" class="container" style="display:none;">
-    <h2>Wählen Sie eine Ansage:</h2>
+    <h2>Informations-Ansagen</h2>
     <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
     <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
     <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
@@ -134,12 +123,12 @@
     <button onclick="playAnsage('Unfall - weiter SEV')">Unfall - weiter SEV</button>
     <button onclick="playAnsage('Vorderer Zugteil endet')">Vorderer Zugteil endet</button>
     <button onclick="playAnsage('Warten auf anderen Zug')">Warten auf anderen Zug</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
-  <!-- S31 Ansagen -->
+  <!-- S31 -->
   <div id="s31" class="container" style="display:none;">
-    <h2>Wählen Sie eine S31 Ansage:</h2>
+    <h2>S31 (AVG) Ansagen</h2>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
     <button onclick="playAnsage('Odenheim (Fahrtende)')">Odenheim (Fahrtende)</button>
     <button onclick="playAnsage('Odenheim West (Bedarf)')">Odenheim West (Bedarf)</button>
@@ -157,15 +146,35 @@
     <button onclick="playAnsage('Weingarten (Baden)')">Weingarten (Baden)</button>
     <button onclick="playAnsage('Karlsruhe-Durlach')">Karlsruhe-Durlach</button>
     <button onclick="playAnsage('Karlsruhe Hbf (Fahrtende)')">Karlsruhe Hbf (Fahrtende)</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
-  <!-- Audio Elemente -->
+  <!-- S32 -->
+  <div id="s32" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 S32 (AVG) Ansagen</h2>
+    <p>Im Bau – noch nicht verfügbar.</p>
+    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- S5 -->
+  <div id="s5" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 S5 (AVG) Ansagen</h2>
+    <p>Im Bau – noch nicht verfügbar.</p>
+    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
+  </footer>
+
+  <!-- Audio -->
   <audio id="gong" src="./avg-gong.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
-    // Browser-Blockierung umgehen: Erstklick aktiviert Audio
+    // Browser-Audio-Blockierung umgehen
     document.body.addEventListener("click", () => {
       const gong = document.getElementById("gong");
       gong.play().then(() => gong.pause());
@@ -175,7 +184,6 @@
       const gong = document.getElementById("gong");
       const audio = document.getElementById("audio");
 
-      // Erst Gong abspielen
       gong.currentTime = 0;
       gong.play().then(() => {
         gong.onended = () => {
@@ -185,32 +193,20 @@
       }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
-    function showInfo() {
+    function showInfo() { hideAll(); document.getElementById("info").style.display = "block"; }
+    function showS31() { hideAll(); document.getElementById("s31").style.display = "block"; }
+    function showS32() { hideAll(); document.getElementById("s32").style.display = "block"; }
+    function showS5() { hideAll(); document.getElementById("s5").style.display = "block"; }
+
+    function backToMenu() { hideAll(); document.getElementById("main-menu").style.display = "block"; }
+
+    function hideAll() {
       document.getElementById("main-menu").style.display = "none";
-      document.getElementById("info").style.display = "block";
+      document.getElementById("info").style.display = "none";
       document.getElementById("s31").style.display = "none";
       document.getElementById("s32").style.display = "none";
-    }
-
-    function showS32() {
-  document.getElementById("main-menu").style.display = "none";
-  document.getElementById("s31").style.display = "none";
-  document.getElementById("info").style.display = "none";
-  document.getElementById("s32").style.display = "block";
-}
-
-    function showS31() {
-      document.getElementById("main-menu").style.display = "none";
-      document.getElementById("s31").style.display = "block";
-      document.getElementById("info").style.display = "none";
-    }
-
-    function backToMenu() {
-      document.getElementById("main-menu").style.display = "block";
-      document.getElementById("info").style.display = "none";
-      document.getElementById("s31").style.display = "none";
+      document.getElementById("s5").style.display = "none";
     }
   </script>
-
 </body>
 </html>
