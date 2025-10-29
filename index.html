@@ -42,7 +42,7 @@
 
     button {
       padding: 15px 30px;
-      margin: 20px;
+      margin: 10px;
       font-size: 18px;
       border: none;
       border-radius: 10px;
@@ -93,96 +93,74 @@
     <button onclick="showInfo()">Informations-Ansagen</button>
     <button onclick="showS31()">S31 (AVG) Ansagen</button>
     <button onclick="showS32()">S32 (AVG) Ansagen</button>
-    <button onclick="showS5()" style="background-color: #FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showS5()" style="background-color: #FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showS6()" style="background-color: #FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
   </div>
 
-  <!-- Info-Ansagen -->
-  <div id="info" class="container" style="display:none;">
-    <h2>Informations-Ansagen</h2>
-    <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
-    <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
-    <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
-    <button onclick="playAnsage('Verspätung 20')">Verspätung 20 Minuten</button>
-    <button onclick="playAnsage('Ärztlicher Notfall')">Ärztlicher Notfall</button>
-    <button onclick="playAnsage('Baustelle - Fahrtende')">Baustelle - Fahrtende</button>
-    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
-    <button onclick="playAnsage('Fahrtausfall')">Fahrtausfall</button>
-    <button onclick="playAnsage('Fahrtende (Normal)')">Fahrtende (Normal)</button>
-    <button onclick="playAnsage('Fahrzeugstörung - Verzögerung')">Fahrzeugstörung - Verzögerung</button>
-    <button onclick="playAnsage('Gegenzug')">Gegenzug</button>
-    <button onclick="playAnsage('Hinterer Zugteil endet')">Hinterer Zugteil endet</button>
-    <button onclick="playAnsage('Notbremse')">Notbremse</button>
-    <button onclick="playAnsage('Störung - Verzögerung')">Störung - Verzögerung</button>
-    <button onclick="playAnsage('Streckenabschnitt durch Zug belegt')">Streckenabschnitt durch Zug belegt</button>
-    <button onclick="playAnsage('Streckensperrung - Fahrtende')">Streckensperrung - Fahrtende</button>
-    <button onclick="playAnsage('Türstörung - Verzögerung')">Türstörung - Verzögerung</button>
-    <button onclick="playAnsage('Überholung')">Überholung</button>
-    <button onclick="playAnsage('Unfall - Fahrtende')">Unfall - Fahrtende</button>
-    <button onclick="playAnsage('Unfall - weiter SEV')">Unfall - weiter SEV</button>
-    <button onclick="playAnsage('Vorderer Zugteil endet')">Vorderer Zugteil endet</button>
-    <button onclick="playAnsage('Warten auf anderen Zug')">Warten auf anderen Zug</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <!-- S31 -->
-  <div id="s31" class="container" style="display:none;">
-    <h2>S31 (AVG) Ansagen</h2>
-    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
-    <button onclick="playAnsage('Odenheim (Fahrtende)')">Odenheim (Fahrtende)</button>
-    <button onclick="playAnsage('Odenheim West (Bedarf)')">Odenheim West (Bedarf)</button>
-    <button onclick="playAnsage('Zeutern Ost (Bedarf)')">Zeutern Ost (Bedarf)</button>
-    <button onclick="playAnsage('Zeutern')">Zeutern</button>
-    <button onclick="playAnsage('Zeutern Sportplatz (Bedarf)')">Zeutern Sportplatz (Bedarf)</button>
-    <button onclick="playAnsage('Stettfeld')">Stettfeld</button>
-    <button onclick="playAnsage('Ubstadt Uhlandstraße')">Ubstadt Uhlandstraße</button>
-    <button onclick="playAnsage('Ubstadt Ort')">Ubstadt Ort</button>
-    <button onclick="playAnsage('Bruchsal Stegwiesen (Bedarf)')">Bruchsal Stegwiesen (Bedarf)</button>
-    <button onclick="playAnsage('Bruchsal Schlossgarten (Bedarf)')">Bruchsal Schlossgarten (Bedarf)</button>
-    <button onclick="playAnsage('Bruchsal Bf')">Bruchsal Bahnhof</button>
-    <button onclick="playAnsage('Bruchsal GBZ (Bedarf)')">Bruchsal GBZ (Bedarf)</button>
-    <button onclick="playAnsage('Untergrombach')">Untergrombach</button>
-    <button onclick="playAnsage('Weingarten (Baden)')">Weingarten (Baden)</button>
-    <button onclick="playAnsage('Karlsruhe-Durlach')">Karlsruhe-Durlach</button>
-    <button onclick="playAnsage('Karlsruhe Hbf (Fahrtende)')">Karlsruhe Hbf (Fahrtende)</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <!-- S32 -->
-  <div id="s32" class="container" style="display:none;">
-    <h2>S31 (AVG) Ansagen</h2>
-    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
-    <button onclick="playAnsage('Menzingen (Fahrtende)')">Menzingen (Fahrtende)</button>
-    <button onclick="playAnsage('Bahnbrücken')">Bahnbrücken (Bedarf)</button>
-    <button onclick="playAnsage('Gochsheim')">Gochsheim</button>
-    <button onclick="playAnsage('Münzesheim Ost (Bedarf)')">Münzesheim Ost (Bedarf)</button>
-    <button onclick="playAnsage('Münzesheim')">Münzesheim</button>
-    <button onclick="playAnsage('Oberöwisheim (Bedarf)')">Oberöwisheim (Bedarf)</button>
-    <button onclick="playAnsage('Unteröwisheim')">Unteröwisheim</button>
-    <button onclick="playAnsage('Unteröwisheim M.-Luther-Str. (Bedarf)')">Unteröw. Martin-Luther-Str. (Bedarf)</button>
-    <button onclick="playAnsage('Ubstadt Salzbrunnenstraße (Bedarf)')">Ubstadt Salzbrunnenstr. (Bedarf)</button>
-    <button onclick="playAnsage('Ubstadt Ort (S32)')">Ubstadt Ort</button>
-    <button onclick="playAnsage('Bruchsal Stegwiesen (Bedarf)')">Bruchsal Stegwiesen (Bedarf)</button>
-    <button onclick="playAnsage('Bruchsal Schlossgarten (Bedarf)')">Bruchsal Schlossgarten (Bedarf)</button>
-    <button onclick="playAnsage('Bruchsal Bf')">Bruchsal Bahnhof</button>
-    <button onclick="playAnsage('Bruchsal GBZ (Bedarf)')">Bruchsal GBZ (Bedarf)</button>
-    <button onclick="playAnsage('Untergrombach')">Untergrombach</button>
-    <button onclick="playAnsage('Weingarten (Baden)')">Weingarten (Baden)</button>
-    <button onclick="playAnsage('Karlsruhe-Durlach')">Karlsruhe-Durlach</button>
-    <button onclick="playAnsage('Karlsruhe Hbf (Fahrtende)')">Karlsruhe Hbf (Fahrtende)</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
   <!-- S5 -->
-<div id="s32" class="container" style="display:none;">
-    <h2>S31 (AVG) Ansagen</h2>
-    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
-  </div>
-  <div id="s5" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+  <div id="s5" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S5 (AVG) Ansagen</h2>
-    <p>Im Bau – teilweise verfügbar.</p>
-    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+    <h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button onclick="playAnsage('Wörth Badepark (Fahrtende)')">Wörth Badepark (Fahrtende)</button>
+    <button onclick="playAnsage('Wörth Badallee (Bedarf)')">Wörth Badallee (Bedarf)</button>
+    <button onclick="playAnsage('Wörth Rathaus (Bedarf)')">Wörth Rathaus (Bedarf)</button>
+    <button onclick="playAnsage('Wörth Bürgerpark (Bedarf)')">Wörth Bürgerpark (Bedarf)</button>
+    <button onclick="playAnsage('Wörth Bienwaldhalle (Bedarf)')">Wörth Bienwaldhalle (Bedarf)</button>
+    <button onclick="playAnsage('Wörth Alte Bahnmeisterei (Bedarf)')">Wörth Alte Bahnmeisterei (Bedarf)</button>
+    <button onclick="playAnsage('Wörth')">Wörth Bahnhof</button>
+    <button onclick="playAnsage('Maximiliansau West (Bedarf)')">Maximiliansau West (Bedarf)</button>
+    <button onclick="playAnsage('Max. Eisenbahnstr. (Bedarf)')">Maximiliansau Eisenbahnstr. (Bedarf)</button>
+    <button onclick="playAnsage('Maxau')">Maxau</button>
+    <button onclick="playAnsage('KA Rheinbergstr. (Stadteinwärts)')">Knielingen Rheinbergstr. (Stadteinwärts)</button>
+    <button onclick="playAnsage('KA Rheinbergstr.')">Knielingen Rheinbergstraße</button>
+    <button onclick="playAnsage('KA Rheinbergstr. (Fahrtende)')">KA Rheinbergstr. (Fahrtende)</button>
+    <button onclick="playAnsage('Eggensteiner Straße')">Eggensteiner Straße</button>
+    <button onclick="playAnsage('Herweghstraße')">Herweghstraße</button>
+    <button onclick="playAnsage('Siemens')">Siemens</button>
+    <button onclick="playAnsage('Mühlburg West')">Mühlburg West</button>
+    <button onclick="playAnsage('Starckstraße')">Starckstraße</button>
+    <button onclick="playAnsage('Lameyplatz (S5)')">Lameyplatz</button>
+    <button onclick="playAnsage('Entenfang (S5)')">Entenfang</button>
+    <button onclick="playAnsage('Philippstraße')">Philippstraße</button>
+    <button onclick="playAnsage('Händelstraße')">Händelstraße</button>
+    <button onclick="playAnsage('Yorckstraße (S5)')">Yorckstraße</button>
+
+    <h3>Nicht verfügbare Ansagen</h3>
+    <button disabled>🚉 Mühlburger Tor (in Arbeit)</button>
+    <button disabled>🚉 Europaplatz (in Arbeit)</button>
+    <button disabled>🚉 Marktplatz (in Arbeit)</button>
+    <button disabled>🚉 Kronenplatz (in Arbeit)</button>
+    <button disabled>🚉 Durlacher Tor/KIT-Campus Süd (in Arbeit)</button>
+    <button disabled>🚉 Gottesauer Platz/BGV (in Arbeit)</button>
+    <button disabled>🚉 Tullastr./Alter Schlachthof (in Arbeit)</button>
+    <button disabled>🚉 Weinweg (in Arbeit)</button>
+    <button disabled>🚉 Untermühlstr. (in Arbeit)</button>
+    <button disabled>🚉 Durlach (in Arbeit)</button>
+    <button disabled>🚉 Hubstr. (in Arbeit)</button>
+    <button disabled>🚉 Grötzingen (in Arbeit)</button>
+    <button disabled>🚉 Gr. Oberausstr. (in Arbeit)</button>
+    <button disabled>🚉 Gr. Krappmühlenweg (in Arbeit)</button>
+    <button disabled>🚉 Berghausen Pfinzbrücke (in Arbeit)</button>
+    <button disabled>🚉 Berghausen (Baden) (in Arbeit)</button>
+    <button disabled>🚉 Berghausen Am Stadion (in Arbeit)</button>
+    <button disabled>🚉 Söllingen Reetzstr. (in Arbeit)</button>
+    <button disabled>🚉 Söllingen Bahnhof (in Arbeit)</button>
+    <button disabled>🚉 Söllingen Kapellenstr. (in Arbeit)</button>
+    <button disabled>🚉 Kleinsteinbach (in Arbeit)</button>
+    <button disabled>🚉 Wilferdingen-Singen Bahnhof (in Arbeit)</button>
+    <button disabled>🚉 Königsbach (Baden) (in Arbeit)</button>
+    <button disabled>🚉 Bilfingen (in Arbeit)</button>
+    <button disabled>🚉 Ersingen West (in Arbeit)</button>
+    <button disabled>🚉 Ersingen (in Arbeit)</button>
+    <button disabled>🚉 Ispringen (in Arbeit)</button>
+    <button disabled>🚉 Pforzheim Hauptbahnhof (in Arbeit)</button>
+
+    <p style="color:gray; margin-top:20px;">Weitere Halte und Ansagen folgen demnächst...</p>
+
+    <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
 
   <!-- S6 -->
@@ -193,20 +171,42 @@
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
+  <!-- Platzhalter für andere Seiten -->
+  <div id="info" class="container" style="display:none;">
+    <h2>Informations-Ansagen</h2>
+    <p>Hier kommen allgemeine Ansagen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <div id="s31" class="container" style="display:none;">
+    <h2>S31 (AVG) Ansagen</h2>
+    <p>Voll verfügbar.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <div id="s32" class="container" style="display:none;">
+    <h2>S32 (AVG) Ansagen</h2>
+    <p>Voll verfügbar.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
   <footer>
     &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
+    Veröffentlichen und unerlaubtes Teilen ist verboten!
   </footer>
 
   <!-- Audio -->
-  <audio id="gong" src="./avg-gong.mp3"></audio>
+  <audio id="gong" src="./avg-gong1.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
+    // Klick-Aktivierung wegen Browser-Audio-Schutz
     document.body.addEventListener("click", () => {
       const gong = document.getElementById("gong");
       gong.play().then(() => gong.pause());
     }, { once: true });
 
+    // Funktion: Ansage abspielen
     function playAnsage(datei) {
       const gong = document.getElementById("gong");
       const audio = document.getElementById("audio");
@@ -220,6 +220,7 @@
       }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
+    // Seitenwechsel
     function showInfo() { hideAll(); document.getElementById("info").style.display = "block"; }
     function showS31() { hideAll(); document.getElementById("s31").style.display = "block"; }
     function showS32() { hideAll(); document.getElementById("s32").style.display = "block"; }
