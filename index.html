@@ -90,14 +90,14 @@
 
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
-    <button onclick="showInfo()">Informations-Ansagen</button>
-    <button onclick="showS31()">S31 (AVG) Ansagen</button>
-    <button onclick="showS32()">S32 (AVG) Ansagen</button>
-    <button onclick="showS5()" style="background-color: #FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
-    <button onclick="showS6()" style="background-color: #FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showS1()" style="background-color: #FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showS7()" style="background-color: #FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showS8()" style="background-color: #FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('info')">Informations-Ansagen</button>
+    <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
+    <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
+    <button onclick="showSection('s5')" style="background-color:#FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
+    <button onclick="showSection('s6')" style="background-color:#FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s8')" style="background-color:#FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
   </div>
 
 <!-- Info-Ansagen -->
@@ -127,7 +127,6 @@
     <button onclick="playAnsage('Unfall - weiter SEV')">Unfall - weiter SEV</button>
     <button onclick="playAnsage('Vorderer Zugteil endet')">Vorderer Zugteil endet</button>
     <button onclick="playAnsage('Warten auf anderen Zug')">Warten auf anderen Zug</button>
-    <button onclick="playAnsage('Fahrplanwechsel 2025')">Fahrplanwechsel Dezember-2025</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -179,7 +178,7 @@
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
-  <!-- S5 -->
+   <!-- S5 -->
   <div id="s5" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S5 (AVG) Ansagen</h2>
     <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
@@ -231,7 +230,7 @@
     <button onclick="playAnsage('Berghausen Pfinzbrücke (Bedarf)')">Berghausen Pfinzbrücke (Bedarf)</button>
     <button onclick="playAnsage('Berghausen')">Berghausen</button>
     <button onclick="playAnsage('Am Stadion (Bedarf)')">Am Stadion (Bedarf)</button>
-    <button onclick="playAnsage('Söllinen Reetzstr. (Bedarf)')">Söllinen Reetzstraße (Bedarf)</button>
+    <button onclick="playAnsage('Söllingen Reetzstr. (Bedarf)')">Söllingen Reetzstraße (Bedarf)</button>
     <button onclick="playAnsage('Söllingen (b. Karlsruhe)(Fahrtende)')">Söllingen (b. Karlsruhe)(Fahrtende)</button>
     <button onclick="playAnsage('Söllingen (b. Karlsruhe)')">Söllingen (b. Karlsruhe)</button>
     <button onclick="playAnsage('Söl. Kapellenstraße (Bedarf)')">Söl. Kapellenstraße (Bedarf)</button>
@@ -244,131 +243,71 @@
     <button onclick="playAnsage('Ispringen')">Ispringen</button>
     <button onclick="playAnsage('Pforzheim (Fahrtende)')">Pforzheim Hbf (Fahrtende)</button>
     <button onclick="playAnsage('Pforzheim Hbf (weiter S6)')">Pforzheim Hbf (weiter S6)</button>
-
     <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
 
   <!-- S6 -->
   <div id="s6" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S6 (AVG) Ansagen</h2>
-    <p>Im Bau – noch nicht verfügbar.</p>
-    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
   <!-- S1 -->
   <div id="s1" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S1 (AVG) Ansagen</h2>
-    <p>Im Bau – noch nicht verfügbar.</p>
-    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
   <!-- S7 -->
   <div id="s7" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S7 (AVG) Ansagen</h2>
-    <p>Im Bau – noch nicht verfügbar.</p>
-    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
   <!-- S8 -->
   <div id="s8" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S8 (AVG) Ansagen</h2>
-    <p>Im Bau – noch nicht verfügbar.</p>
-    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <!-- Platzhalter für andere Seiten -->
-  <div id="info" class="container" style="display:none;">
-    <h2>Informations-Ansagen</h2>
-    <p>Hier kommen allgemeine Ansagen.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <div id="s31" class="container" style="display:none;">
-    <h2>S31 (AVG) Ansagen</h2>
-    <p>Voll verfügbar.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <div id="s32" class="container" style="display:none;">
-    <h2>S32 (AVG) Ansagen</h2>
-    <p>Voll verfügbar.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <div id="s1" class="container" style="display:none;">
-    <h2>S32 (AVG) Ansagen</h2>
-    <p>Voll verfügbar.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <div id="s7" class="container" style="display:none;">
-    <h2>S7 (AVG) Ansagen</h2>
-    <p>Voll verfügbar.</p>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <div id="s8" class="container" style="display:none;">
-    <h2>S32 (AVG) Ansagen</h2>
-    <p>Voll verfügbar.</p>
+    <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
   <footer>
     &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
-    Veröffentlichen und unerlaubtes Teilen ist verboten!
   </footer>
 
-  <!-- Audio -->
   <audio id="gong" src="./avg-gong1.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
-    // Klick-Aktivierung wegen Browser-Audio-Schutz
     document.body.addEventListener("click", () => {
       const gong = document.getElementById("gong");
       gong.play().then(() => gong.pause());
     }, { once: true });
 
-    // Funktion: Ansage abspielen
-    function playAnsage(datei) {
+    function playAnsage(name) {
       const gong = document.getElementById("gong");
       const audio = document.getElementById("audio");
 
       gong.currentTime = 0;
       gong.play().then(() => {
         gong.onended = () => {
-          audio.src = "./" + datei + ".mp3";
+          audio.src = "./" + name + ".mp3";
           audio.play().catch(err => console.log("Fehler beim Abspielen:", err));
         };
       }).catch(err => console.log("Fehler beim Gong:", err));
     }
 
-    // Seitenwechsel
-    function showInfo() { hideAll(); document.getElementById("info").style.display = "block"; }
-    function showS31() { hideAll(); document.getElementById("s31").style.display = "block"; }
-    function showS32() { hideAll(); document.getElementById("s32").style.display = "block"; }
-    function showS5() { hideAll(); document.getElementById("s5").style.display = "block"; }
-    function showS6() { hideAll(); document.getElementById("s6").style.display = "block"; }
-    function showS1() { hideAll(); document.getElementById("s5").style.display = "block"; }
-    function showS7() { hideAll(); document.getElementById("s6").style.display = "block"; }
-    function showS8() { hideAll(); document.getElementById("s6").style.display = "block"; }
+    function showSection(id) {
+      document.querySelectorAll(".container").forEach(div => div.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
 
-    function backToMenu() { hideAll(); document.getElementById("main-menu").style.display = "block"; }
-
-    function hideAll() {
-      document.getElementById("main-menu").style.display = "none";
-      document.getElementById("info").style.display = "none";
-      document.getElementById("s31").style.display = "none";
-      document.getElementById("s32").style.display = "none";
-      document.getElementById("s5").style.display = "none";
-      document.getElementById("s6").style.display = "none";
-      document.getElementById("s1").style.display = "none";
-      document.getElementById("s7").style.display = "none";
-      document.getElementById("s8").style.display = "none";
+    function backToMenu() {
+      document.querySelectorAll(".container").forEach(div => div.style.display = "none");
+      document.getElementById("main-menu").style.display = "block";
     }
   </script>
 </body>
