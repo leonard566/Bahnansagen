@@ -95,11 +95,16 @@
     <button onclick="showS32()">S32 (AVG) Ansagen</button>
     <button onclick="showS5()" style="background-color: #FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showS6()" style="background-color: #FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showS1()" style="background-color: #FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showS7()" style="background-color: #FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showS8()" style="background-color: #FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
   </div>
 
 <!-- Info-Ansagen -->
   <div id="info" class="container" style="display:none;">
     <h2>Informations-Ansagen</h2>
+    <button onclick="playAnsage('Fahrplanwechsel 2025')">Fahrplanwechsel Dezember-2025</button>
+    <p><p/>
     <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
     <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
     <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
@@ -122,6 +127,7 @@
     <button onclick="playAnsage('Unfall - weiter SEV')">Unfall - weiter SEV</button>
     <button onclick="playAnsage('Vorderer Zugteil endet')">Vorderer Zugteil endet</button>
     <button onclick="playAnsage('Warten auf anderen Zug')">Warten auf anderen Zug</button>
+    <button onclick="playAnsage('Fahrplanwechsel 2025')">Fahrplanwechsel Dezember-2025</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -204,7 +210,7 @@
     <button onclick="playAnsage('Händelstraße')">Händelstraße</button>
     <button onclick="playAnsage('Yorckstraße (S5)')">Yorckstraße</button>
 
-    <h3>Nicht verfügbare Ansagen</h3>
+<h3>Nicht verfügbare Ansagen</h3>
     <button disabled>🚉 Mühlburger Tor (in Arbeit)</button>
     <button disabled>🚉 Europaplatz (in Arbeit)</button>
     <button disabled>🚉 Marktplatz (in Arbeit)</button>
@@ -213,28 +219,31 @@
     <button disabled>🚉 Gottesauer Platz/BGV (in Arbeit)</button>
     <button disabled>🚉 Tullastr./Alter Schlachthof (in Arbeit)</button>
     <button disabled>🚉 Weinweg (in Arbeit)</button>
-    <button disabled>🚉 Untermühlstr. (in Arbeit)</button>
-    <button disabled>🚉 Durlach (in Arbeit)</button>
-    <button disabled>🚉 Hubstr. (in Arbeit)</button>
-    <button disabled>🚉 Grötzingen (in Arbeit)</button>
-    <button disabled>🚉 Gr. Oberausstr. (in Arbeit)</button>
-    <button disabled>🚉 Gr. Krappmühlenweg (in Arbeit)</button>
-    <button disabled>🚉 Berghausen Pfinzbrücke (in Arbeit)</button>
-    <button disabled>🚉 Berghausen (Baden) (in Arbeit)</button>
-    <button disabled>🚉 Berghausen Am Stadion (in Arbeit)</button>
-    <button disabled>🚉 Söllingen Reetzstr. (in Arbeit)</button>
-    <button disabled>🚉 Söllingen Bahnhof (in Arbeit)</button>
-    <button disabled>🚉 Söllingen Kapellenstr. (in Arbeit)</button>
-    <button disabled>🚉 Kleinsteinbach (in Arbeit)</button>
-    <button disabled>🚉 Wilferdingen-Singen Bahnhof (in Arbeit)</button>
-    <button disabled>🚉 Königsbach (Baden) (in Arbeit)</button>
-    <button disabled>🚉 Bilfingen (in Arbeit)</button>
-    <button disabled>🚉 Ersingen West (in Arbeit)</button>
-    <button disabled>🚉 Ersingen (in Arbeit)</button>
-    <button disabled>🚉 Ispringen (in Arbeit)</button>
-    <button disabled>🚉 Pforzheim Hauptbahnhof (in Arbeit)</button>
+    <button disabled>🚉 Untermühlstr. (in Arbeit)</button>    
+    <p style="color:gray; margin-top:20px;">Haltestellen bald verfübar!</p>
 
-    <p style="color:gray; margin-top:20px;">Weitere Halte und Ansagen folgen demnächst...</p>
+    <h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Durlach Bf (S5)')">Durlach Bahnhof</button>
+    <button onclick="playAnsage('Hubstraße (Bedarf)')">Hubstraße (Bedarf)</button>
+    <button onclick="playAnsage('KA Grötzingen')">Grötzingen</button>
+    <button onclick="playAnsage('Oberausstraße')">Oberausstraße</button>
+    <button onclick="playAnsage('Krappmühlenweg')">Krappmühlenweg</button>
+    <button onclick="playAnsage('Berghausen Pfinzbrücke (Bedarf)')">Berghausen Pfinzbrücke (Bedarf)</button>
+    <button onclick="playAnsage('Berghausen')">Berghausen</button>
+    <button onclick="playAnsage('Am Stadion (Bedarf)')">Am Stadion (Bedarf)</button>
+    <button onclick="playAnsage('Söllinen Reetzstr. (Bedarf)')">Söllinen Reetzstraße (Bedarf)</button>
+    <button onclick="playAnsage('Söllingen (b. Karlsruhe)(Fahrtende)')">Söllingen (b. Karlsruhe)(Fahrtende)</button>
+    <button onclick="playAnsage('Söllingen (b. Karlsruhe)')">Söllingen (b. Karlsruhe)</button>
+    <button onclick="playAnsage('Söl. Kapellenstraße (Bedarf)')">Söl. Kapellenstraße (Bedarf)</button>
+    <button onclick="playAnsage('Kleinsteinbach')">Kleinsteinbach</button>
+    <button onclick="playAnsage('Wilferdingen-Singen')">Wilferdingen-Singen</button>
+    <button onclick="playAnsage('Königsbach')">Königsbach</button>
+    <button onclick="playAnsage('Bilfingen (Bedarf)')">Bilfingen (Bedarf)</button>
+    <button onclick="playAnsage('Ersingen West (Bedarf)')">Ersingen West (Bedarf)</button>
+    <button onclick="playAnsage('Ersingen (Bedarf)')">Ersingen (Bedarf)</button>
+    <button onclick="playAnsage('Ispringen')">Ispringen</button>
+    <button onclick="playAnsage('Pforzheim (Fahrtende)')">Pforzheim Hbf (Fahrtende)</button>
+    <button onclick="playAnsage('Pforzheim Hbf (weiter S6)')">Pforzheim Hbf (weiter S6)</button>
 
     <button class="back-button" onclick="backToMenu()">← Zurück zum Hauptbildschirm</button>
   </div>
@@ -242,6 +251,30 @@
   <!-- S6 -->
   <div id="s6" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S6 (AVG) Ansagen</h2>
+    <p>Im Bau – noch nicht verfügbar.</p>
+    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- S1 -->
+  <div id="s1" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 S1 (AVG) Ansagen</h2>
+    <p>Im Bau – noch nicht verfügbar.</p>
+    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- S7 -->
+  <div id="s7" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 S7 (AVG) Ansagen</h2>
+    <p>Im Bau – noch nicht verfügbar.</p>
+    <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- S8 -->
+  <div id="s8" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 S8 (AVG) Ansagen</h2>
     <p>Im Bau – noch nicht verfügbar.</p>
     <p>Seite neu laden, um diesen Hinweis zu schließen.</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
@@ -261,6 +294,24 @@
   </div>
 
   <div id="s32" class="container" style="display:none;">
+    <h2>S32 (AVG) Ansagen</h2>
+    <p>Voll verfügbar.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <div id="s1" class="container" style="display:none;">
+    <h2>S32 (AVG) Ansagen</h2>
+    <p>Voll verfügbar.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <div id="s7" class="container" style="display:none;">
+    <h2>S7 (AVG) Ansagen</h2>
+    <p>Voll verfügbar.</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <div id="s8" class="container" style="display:none;">
     <h2>S32 (AVG) Ansagen</h2>
     <p>Voll verfügbar.</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
@@ -302,6 +353,9 @@
     function showS32() { hideAll(); document.getElementById("s32").style.display = "block"; }
     function showS5() { hideAll(); document.getElementById("s5").style.display = "block"; }
     function showS6() { hideAll(); document.getElementById("s6").style.display = "block"; }
+    function showS1() { hideAll(); document.getElementById("s5").style.display = "block"; }
+    function showS7() { hideAll(); document.getElementById("s6").style.display = "block"; }
+    function showS8() { hideAll(); document.getElementById("s6").style.display = "block"; }
 
     function backToMenu() { hideAll(); document.getElementById("main-menu").style.display = "block"; }
 
@@ -312,6 +366,9 @@
       document.getElementById("s32").style.display = "none";
       document.getElementById("s5").style.display = "none";
       document.getElementById("s6").style.display = "none";
+      document.getElementById("s1").style.display = "none";
+      document.getElementById("s7").style.display = "none";
+      document.getElementById("s8").style.display = "none";
     }
   </script>
 </body>
