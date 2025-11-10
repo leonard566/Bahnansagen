@@ -83,7 +83,20 @@
       background-color: #666;
     }
   </style>
+
 </head>
+
+<input type="text" id="search" placeholder="🔍 Ansage suchen... (Zuerst Linie wählen!!)" onkeyup="filterButtons()" style="width:100%;padding:8px;margin:10px 0;">
+
+<script>
+function filterButtons() {
+  const filter = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll("button").forEach(btn => {
+    const text = btn.innerText.toLowerCase();
+    btn.style.display = text.includes(filter) ? "block" : "none";
+  });
+}
+</script>
 
 <body>
   <h1>🎤 Zug-Ansagen System</h1>
@@ -95,7 +108,7 @@
     <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
     <button onclick="showSection('s5')" style="background-color:#FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s6')" style="background-color:#FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s8')" style="background-color:#FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
   </div>
@@ -254,11 +267,40 @@
   </div>
 
   <!-- S1 -->
-  <div id="s1" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+<div id="s1" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S1 (AVG) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+    <h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button onclick="playAnsage('Bad Herrenalb (Fahrtende)')">Bad Herrenalb (Fahrtende)</button>
+    <button onclick="playAnsage('Bad Herrenalb Kullenmühle (Bedarf)')">Bad Herrenalb Kullenmühle (Bedarf)</button>
+    <button onclick="playAnsage('Frauenalb-Schielberg')">Frauenalb-Schielberg</button>
+    <button onclick="playAnsage('Marxell')">Marxell</button>
+    <button onclick="playAnsage('Fischweier (Bedarf)')">Fischweier (Bedarf)</button>
+    <button onclick="playAnsage('Etzenrot')">Etzenrot</button>
+    <button onclick="playAnsage('Busenbach (S1)')">Busenbach</button>
+    <button onclick="playAnsage('Ettlingen Spinnerei')">Ettlingen Spinnerei</button>
+    <button onclick="playAnsage('Ettlingen Albgaubad')">Ettlingen Albgaubad</button>
+    <button onclick="playAnsage('Ettlingen Albgaubad (Fahrtende)')">Ettlingen Albgaubad (Fahrtende)</button>
+    <button onclick="playAnsage('Ettlingen Stadt')">Ettlingen Stadt</button>
+    <button onclick="playAnsage('Ettlingen Erbprinz')">Ettlingen Erbprinz</button>
+    <button onclick="playAnsage('Ettlingen Wasen (Normal)')">Ettlingen Wasen (Normal)</button>
+    <button onclick="playAnsage('Ettlingen Wasen (Zugverband)')">Ettlingen Wasen (Ausstieg 1. Fz)</button>
+    <button onclick="playAnsage('Ettlingen Neuwiesenreben (Bedarf)')">Ettlingen Neuwiesenreben (Bedarf)</button>
+    <button onclick="playAnsage('Rüpurr Battstraße')">Rüpurr Battstraße</button>
+    <button onclick="playAnsage('Rüpurr Tulpenstraße')">Rüpurr Tulpenstraße</button>
+    <button onclick="playAnsage('Rüpurr Ostendorfplatz')">Rüpurr Ostendorfplatz</button>
+    <button onclick="playAnsage('Schloss Rüpurr')">Schloss Rüpurr</button>
+    <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
+    <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
+    <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
+    
+    <p style="color:gray; margin-top:20px;">Weitere Haltestellen bald verfübar!</p>
+
   </div>
+
 
   <!-- S7 -->
   <div id="s7" class="container" style="display:none; background-color:#FF9800; color:#fff;">
@@ -273,6 +315,29 @@
     <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
+
+<script>
+function updateCountdowns() {
+  const rows = document.querySelectorAll("#fahrplan tbody tr");
+  const now = new Date();
+  
+  rows.forEach(row => {
+    const abfahrtStr = row.cells[2].innerText;
+    const [h, m] = abfahrtStr.split(":");
+    const abfahrt = new Date();
+    abfahrt.setHours(h, m, 0, 0);
+    if (abfahrt < now) abfahrt.setDate(abfahrt.getDate() + 1);
+    
+    const diff = abfahrt - now;
+    const min = Math.floor(diff / 60000);
+    const sec = Math.floor((diff % 60000) / 1000);
+    row.cells[3].innerText = `${min} min ${sec}s`;
+  });
+}
+setInterval(updateCountdowns, 1000);
+updateCountdowns();
+</script>
+
 
   <footer>
     &copy; 2025 Leonard Klinger – Alle Rechte vorbehalten.
@@ -310,5 +375,97 @@
       document.getElementById("main-menu").style.display = "block";
     }
   </script>
+
+<!-- 🚀 Erweiterte Funktionen: Filter, Animation, Auto-Ansage, Alarm, Ereignisplaner -->
+<style>
+  /* ===== Button-Animation ===== */
+  button.playing {
+    animation: pulse 0.4s ease;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); background-color: #4CAF50; }
+    50% { transform: scale(1.1); background-color: #81C784; }
+    100% { transform: scale(1); background-color: #4CAF50; }
+  }
+
+  /* ===== Ereignisplaner-Styling ===== */
+  #ereignisListe {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+</style>
+
+<div class="container" style="margin-top:40px;">
+  <h2>⚙️ Erweiterte Funktionen</h2>
+
+  <!-- 🔹 Filter -->
+  <label for="linienFilter">Linie filtern:</label>
+  <select id="linienFilter" onchange="filterLinien()" style="padding:8px; font-size:16px; border-radius:6px;">
+    <option value="alle">Alle Linien</option>
+    <option value="s1">S1</option>
+    <option value="s5">S5</option>
+    <option value="s6">S6</option>
+    <option value="s31">S31</option>
+    <option value="s32">S32</option>
+  </select>
+
+  <hr>
+
+  <!-- 🔹 Automatische Ansage -->
+  <h3>🕒 Automatische Ansage</h3>
+  <input id="autoAnsageName" placeholder="Ansagenname (z. B. Begrüßung)" style="padding:8px; width:60%;">
+  <input id="autoAnsageZeit" type="number" placeholder="Sekunden" min="1" style="padding:8px; width:20%;">
+  <button onclick="startAutoAnsage()">Starten</button>
+
+<script>
+  /* ========================================
+     1️⃣ Filter-Funktion
+  ======================================== */
+  function filterLinien() {
+    const linie = document.getElementById("linienFilter").value;
+    const buttons = document.querySelectorAll("#main-menu button");
+
+    buttons.forEach(btn => {
+      if (linie === "alle" || btn.textContent.includes(linie.toUpperCase())) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+  }
+
+  /* ========================================
+     2️⃣ Animation bei Klick
+  ======================================== */
+  const originalPlayAnsage = playAnsage;
+  playAnsage = function(datei, element) {
+    if (element) {
+      element.classList.add("playing");
+      setTimeout(() => element.classList.remove("playing"), 400);
+    }
+    originalPlayAnsage(datei);
+  }
+
+  /* ========================================
+     3️⃣ Automatische Ansage
+  ======================================== */
+  function startAutoAnsage() {
+    const name = document.getElementById("autoAnsageName").value.trim();
+    const zeit = parseInt(document.getElementById("autoAnsageZeit").value);
+
+    if (!name || isNaN(zeit)) {
+      alert("Bitte Ansagenname und Zeit eingeben!");
+      return;
+    }
+
+    alert(`Spielt "${name}" in ${zeit} Sekunden automatisch ab.`);
+    setTimeout(() => playAnsage(name, document.body), zeit * 1000);
+  }
+
+  setInterval(checkEvents, 60000); // prüft jede Minute
+  renderEvents();
+</script>
+
 </body>
 </html>
