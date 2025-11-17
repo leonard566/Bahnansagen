@@ -104,9 +104,9 @@ function filterButtons() {
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
     <button onclick="showSection('info')">Informations-Ansagen</button>
+    <button onclick="showSection('s5')">S5 (AVG) Ansagen</button>
     <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
     <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
-    <button onclick="showSection('s5')" style="background-color:#FF9800;">🚧 S5 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s6')" style="background-color:#FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
@@ -192,11 +192,8 @@ function filterButtons() {
   </div>
 
    <!-- S5 -->
-  <div id="s5" class="container" style="display:none; background-color:#FFF3E0;">
-    <h2>🚧 S5 (AVG) Ansagen</h2>
-    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
-
-    <h3>Verfügbare Ansagen</h3>
+  <div id="s5" class="container" style="display:none;">
+    <h2>S5 (AVG) Ansagen</h2>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
     <button onclick="playAnsage('Wörth Badepark (Fahrtende)')">Wörth Badepark (Fahrtende)</button>
     <button onclick="playAnsage('Wörth Badallee (Bedarf)')">Wörth Badallee (Bedarf)</button>
@@ -221,20 +218,15 @@ function filterButtons() {
     <button onclick="playAnsage('Philippstraße')">Philippstraße</button>
     <button onclick="playAnsage('Händelstraße')">Händelstraße</button>
     <button onclick="playAnsage('Yorckstraße (S5)')">Yorckstraße</button>
-
-<h3>Nicht verfügbare Ansagen</h3>
-    <button disabled>🚉 Mühlburger Tor (in Arbeit)</button>
-    <button disabled>🚉 Europaplatz (in Arbeit)</button>
-    <button disabled>🚉 Marktplatz (in Arbeit)</button>
-    <button disabled>🚉 Kronenplatz (in Arbeit)</button>
-    <button disabled>🚉 Durlacher Tor/KIT-Campus Süd (in Arbeit)</button>
-    <button disabled>🚉 Gottesauer Platz/BGV (in Arbeit)</button>
-    <button disabled>🚉 Tullastr./Alter Schlachthof (in Arbeit)</button>
-    <button disabled>🚉 Weinweg (in Arbeit)</button>
-    <button disabled>🚉 Untermühlstr. (in Arbeit)</button>    
-    <p style="color:gray; margin-top:20px;">Haltestellen bald verfübar!</p>
-
-    <h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Mühlburger Tor (S5)')">Mühlburger Tor</button>
+    <button onclick="playAnsage('Euro (S5)')">Europaplatz</button>
+    <button onclick="playAnsage('Marktplatz (Kaiserstraße)')">Marktplatz (Kaiserstraße)</button>
+    <button onclick="playAnsage('Kronenplatz (S5)')">Kronenplatz</button>
+    <button onclick="playAnsage('Durlacher Tor')">Durlacher Tor/KIT-Campus Süd</button>
+    <button onclick="playAnsage('Gottesauer Platz')">Gottesauer Platz/BGV</button>
+    <button onclick="playAnsage('Tulla VBK (S5)')">Tullastr./Alter Schlachthof</button>
+    <button onclick="playAnsage('Weinweg')">Weinweg</button>
+    <button onclick="playAnsage('Untermühlstraße (S5)')">Untermühlstraße</button>
     <button onclick="playAnsage('Durlach Bf (S5)')">Durlach Bahnhof</button>
     <button onclick="playAnsage('Hubstraße (Bedarf)')">Hubstraße (Bedarf)</button>
     <button onclick="playAnsage('KA Grötzingen')">Grötzingen</button>
