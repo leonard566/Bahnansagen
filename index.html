@@ -6,15 +6,13 @@
   <title>Zug-Ansagen System</title>
   <style>
     footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #333;
-      color: #fff;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px;
       font-size: 0.9em;
-      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+      color: #777;
+      margin-top: 40px;
+      background-color: transparent;
+      position: static; /* ← Wichtig */
     }
 
     body {
@@ -92,6 +90,14 @@
     font-size: 1.1em;
     color: #444;
     }
+
+    .label {
+     font-size: 0.9em;
+     font-weight: bold;
+     color: #888;
+     margin-top: 22px;
+    }
+
   </style>
 
 </head>
@@ -109,6 +115,7 @@ function filterButtons() {
 </script>
 
 <body>
+
   <h1>🎤 Zug-Ansagen System</h1>
 
   <!-- Hauptmenü -->
@@ -121,7 +128,8 @@ function filterButtons() {
     <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s8')" style="background-color:#FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
+    <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar  )</button>
+    <button onclick="showSection('s3')" style="background-color:#C084FF;">🚧 S3 (S-Bahn RN) [BETA] Ansagen 🚧 (Im Bau)</button>
   </div>
 
 <!-- Info-Ansagen -->
@@ -311,7 +319,7 @@ function filterButtons() {
     <button onclick="playAnsage('Moltkestraße (S1)')">Moltkestraße/Städt. Klinikum</button>
     <button onclick="playAnsage('Knielinger Allee')">Knielinger Allee/Städt. Klinikum</button>
     <button onclick="playAnsage('August-Bebel-Straße')">August-Bebel-Straße</button>
-    <button onclick="playAnsage('Kurt-Schumacher-Straße')">Kurt-Schumacher-Straße</button>
+    <button onclick="playAnsage('Kurt-Schuhmacher-Straße')">Kurt-Schuhmacher-Straße</button>
     <button onclick="playAnsage('Haus Bethlehem')">Haus Bethlehem</button>
     <button onclick="playAnsage('Neureut Welschneureuter Straße')">Neureut Welschneureuter Straße</button>
     <button onclick="playAnsage('Neureut Bärenweg')">Neureut Bärenweg</button>
@@ -389,7 +397,7 @@ function filterButtons() {
     <button onclick="playAnsage('Moltkestraße (S1)')">Moltkestraße/Städt. Klinikum</button>
     <button onclick="playAnsage('Knielinger Allee')">Knielinger Allee/Städt. Klinikum</button>
     <button onclick="playAnsage('August-Bebel-Straße')">August-Bebel-Straße</button>
-    <button onclick="playAnsage('Kurt-Schumacher-Straße')">Kurt-Schumacher-Straße</button>
+    <button onclick="playAnsage('Kurt-Schuhmacher-Straße')">Kurt-Schuhmacher-Straße</button>
     <button onclick="playAnsage('Haus Bethlehem')">Haus Bethlehem</button>
     <button onclick="playAnsage('Neureut Welschneureuter Straße')">Neureut Welschneureuter Straße</button>
     <button onclick="playAnsage('Neureut Bärenweg')">Neureut Bärenweg</button>
@@ -416,6 +424,21 @@ function filterButtons() {
 
   </div>
 
+  <!-- S3 -->
+  <div id="s3" class="container" style="display:none; background-color:#C084FF; color:#fff;">
+    <h2>🚧 S3 (S-Bahn RN) [BETA] Ansagen</h2>
+    <p>Im Bau – bald verfügbar!</p>
+
+<div class="label">Karlsruhe Hauptbahnhof</div>
+<button onclick="playAnsage('Hbf Begrüßung -MA')">Ziel Mannheim</button>
+<button onclick="playAnsage('Hbf Begrüßung -GER-KA')">Ziel Karlsruhe über Germersheim</button>
+
+<div class="label">Karlsruhe-Durlach</div>
+<button>Noch nichts..</button>
+
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
 <script>
 function updateCountdowns() {
   const rows = document.querySelectorAll("#fahrplan tbody tr");
@@ -439,7 +462,7 @@ updateCountdowns();
 </script>
 
 <div class="credits">
-  <p><b>Kommentare:</b>S1: Hbf noch nicht verfügbar. S6 verzögert sich weiterhin!</p>
+  <p><b>Kommentare: </b>S1: Hbf noch nicht verfügbar. S6 verzögert sich weiterhin!</p>
 </div>
 
   <footer>
