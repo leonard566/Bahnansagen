@@ -121,7 +121,7 @@ function filterButtons() {
     <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s8')" style="background-color:#FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
   </div>
 
 <!-- Info-Ansagen -->
@@ -298,9 +298,43 @@ function filterButtons() {
     <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
+    <p>Hauptbahnhof🚧</p>
+    <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
+    <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
+    <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
+    <button onclick="playAnsage('Ettlinger Tor (S1)')">Ettlinger Tor/Staatstheater</button>
+    <button onclick="playAnsage('Marktplatz (P) (S1)')">Marktplatz Pyramide</button>
+    <button onclick="playAnsage('Marktplatz (K) (S1)')">Marktplatz Kaiserstraße</button>
+    <button onclick="playAnsage('Euro (S5)')">Europaplatz</button>
+    <button onclick="playAnsage('Mühlburger Tor (S5)')">Mühlburger Tor</button>
+    <button onclick="playAnsage('Yorckstraße (S1)')">Yorckstraße</button>
+    <button onclick="playAnsage('Moltkestraße (S1)')">Moltkestraße/Städt. Klinikum</button>
+    <button onclick="playAnsage('Knielinger Allee')">Knielinger Allee/Städt. Klinikum</button>
+    <button onclick="playAnsage('August-Bebel-Straße')">August-Bebel-Straße</button>
+    <button onclick="playAnsage('Kurt-Schumacher-Straße')">Kurt-Schumacher-Straße</button>
+    <button onclick="playAnsage('Haus Bethlehem')">Haus Bethlehem</button>
+    <button onclick="playAnsage('Neureut Welschneureuter Straße')">Neureut Welschneureuter Straße</button>
+    <button onclick="playAnsage('Neureut Bärenweg')">Neureut Bärenweg</button>
+    <button onclick="playAnsage('Neureut Adolf-Ehrmann-Bad')">Neureut Adolf-Ehrmann-Bad</button>
+    <button onclick="playAnsage('Neureut Kirchfeld')">Neureut Kirchfeld</button>
+    <button onclick="playAnsage('Neureut Kirchfeld (Fahrtende)')">Neureut Kirchfeld (Fahrtende)</button>
+    <button onclick="playAnsage('Eggenstein Süd')">Eggenstein Süd</button>
+    <button onclick="playAnsage('Eggenstein')">Eggenstein</button>
+    <button onclick="playAnsage('Eggenstein Spöcker Weg')">Eggenstein Spöcker Weg</button>
+    <button onclick="playAnsage('Eggenstein Schweriner Straße')">Eggenstein Schweriner Straße</button>
+    <button onclick="playAnsage('Leopoldshafen Viermorgen')">Leopoldshafen Viermorgen</button>
+    <button onclick="playAnsage('Leopoldshafen Leopoldstraße')">Leopoldshafen Leopoldstraße</button>
+    <button onclick="playAnsage('Leopoldshafen Frankfurter Straße')">Leopoldshafen Frankfurter Straße</button>
+    <button onclick="playAnsage('Linkenheim Süd (Bedarf)')">Linkenheim Süd (Bedarf)</button>
+    <button onclick="playAnsage('Linkenheim Friedrichstraße')">Linkenheim Friedrichstraße</button>
+    <button onclick="playAnsage('Linkenheim Rathaus')">Linkenheim Rathaus</button>
+    <button onclick="playAnsage('Linkenheim Schulzentrum')">Linkenheim Schulzentrum</button>
+    <button onclick="playAnsage('Linkenheim Grenzstraße')">Linkenheim Grenzstraße</button>
+    <button onclick="playAnsage('Hochstetten Altenheim (Bedarf)')">Hochstetten Altenheim (Bedarf)</button>
+    <button onclick="playAnsage('Hochstetten (Fahrtende)')">Hochstetten (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
-    
-    <p style="color:gray; margin-top:20px;">Weitere Haltestellen bald verfübar!</p>
+
+    <p style="color:gray; margin-top:20px;">Karlsruhe Hauptbahnhof bald verfübar!</p>
 
   </div>
 
@@ -320,10 +354,66 @@ function filterButtons() {
   </div>
 
   <!-- S11 -->
-  <div id="s11" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+<div id="s11" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S11 (AVG) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+    <h3>Verfügbare Ansagen</h3>
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+
+    <button onclick="playAnsage('Ettlingen Spinnerei')">Ettlingen Spinnerei</button>
+    <button onclick="playAnsage('Ettlingen Albgaubad')">Ettlingen Albgaubad</button>
+    <button onclick="playAnsage('Ettlingen Albgaubad (Fahrtende)')">Ettlingen Albgaubad (Fahrtende)</button>
+    <button onclick="playAnsage('Ettlingen Stadt')">Ettlingen Stadt</button>
+    <button onclick="playAnsage('Ettlingen Erbprinz')">Ettlingen Erbprinz</button>
+    <button onclick="playAnsage('Ettlingen Wasen (Normal)')">Ettlingen Wasen (Normal)</button>
+    <button onclick="playAnsage('Ettlingen Wasen (Zugverband)')">Ettlingen Wasen (Ausstieg 1. Fz)</button>
+    <button onclick="playAnsage('Ettlingen Neuwiesenreben (Bedarf)')">Ettlingen Neuwiesenreben (Bedarf)</button>
+    <button onclick="playAnsage('Rüpurr Battstraße')">Rüpurr Battstraße</button>
+    <button onclick="playAnsage('Rüpurr Tulpenstraße')">Rüpurr Tulpenstraße</button>
+    <button onclick="playAnsage('Rüpurr Ostendorfplatz')">Rüpurr Ostendorfplatz</button>
+    <button onclick="playAnsage('Schloss Rüpurr')">Schloss Rüpurr</button>
+    <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
+    <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
+    <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
+    <p>Hauptbahnhof🚧</p>
+    <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
+    <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
+    <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
+    <button onclick="playAnsage('Ettlinger Tor (S1)')">Ettlinger Tor/Staatstheater</button>
+    <button onclick="playAnsage('Marktplatz (P) (S1)')">Marktplatz Pyramide</button>
+    <button onclick="playAnsage('Marktplatz (K) (S1)')">Marktplatz Kaiserstraße</button>
+    <button onclick="playAnsage('Euro (S5)')">Europaplatz</button>
+    <button onclick="playAnsage('Mühlburger Tor (S5)')">Mühlburger Tor</button>
+    <button onclick="playAnsage('Yorckstraße (S1)')">Yorckstraße</button>
+    <button onclick="playAnsage('Moltkestraße (S1)')">Moltkestraße/Städt. Klinikum</button>
+    <button onclick="playAnsage('Knielinger Allee')">Knielinger Allee/Städt. Klinikum</button>
+    <button onclick="playAnsage('August-Bebel-Straße')">August-Bebel-Straße</button>
+    <button onclick="playAnsage('Kurt-Schumacher-Straße')">Kurt-Schumacher-Straße</button>
+    <button onclick="playAnsage('Haus Bethlehem')">Haus Bethlehem</button>
+    <button onclick="playAnsage('Neureut Welschneureuter Straße')">Neureut Welschneureuter Straße</button>
+    <button onclick="playAnsage('Neureut Bärenweg')">Neureut Bärenweg</button>
+    <button onclick="playAnsage('Neureut Adolf-Ehrmann-Bad')">Neureut Adolf-Ehrmann-Bad</button>
+    <button onclick="playAnsage('Neureut Kirchfeld')">Neureut Kirchfeld</button>
+    <button onclick="playAnsage('Neureut Kirchfeld (Fahrtende)')">Neureut Kirchfeld (Fahrtende)</button>
+    <button onclick="playAnsage('Eggenstein Süd')">Eggenstein Süd</button>
+    <button onclick="playAnsage('Eggenstein')">Eggenstein</button>
+    <button onclick="playAnsage('Eggenstein Spöcker Weg')">Eggenstein Spöcker Weg</button>
+    <button onclick="playAnsage('Eggenstein Schweriner Straße')">Eggenstein Schweriner Straße</button>
+    <button onclick="playAnsage('Leopoldshafen Viermorgen')">Leopoldshafen Viermorgen</button>
+    <button onclick="playAnsage('Leopoldshafen Leopoldstraße')">Leopoldshafen Leopoldstraße</button>
+    <button onclick="playAnsage('Leopoldshafen Frankfurter Straße')">Leopoldshafen Frankfurter Straße</button>
+    <button onclick="playAnsage('Linkenheim Süd (Bedarf)')">Linkenheim Süd (Bedarf)</button>
+    <button onclick="playAnsage('Linkenheim Friedrichstraße')">Linkenheim Friedrichstraße</button>
+    <button onclick="playAnsage('Linkenheim Rathaus')">Linkenheim Rathaus</button>
+    <button onclick="playAnsage('Linkenheim Schulzentrum')">Linkenheim Schulzentrum</button>
+    <button onclick="playAnsage('Linkenheim Grenzstraße')">Linkenheim Grenzstraße</button>
+    <button onclick="playAnsage('Hochstetten Altenheim (Bedarf)')">Hochstetten Altenheim (Bedarf)</button>
+    <button onclick="playAnsage('Hochstetten (Fahrtende)')">Hochstetten (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
+
+    <p style="color:gray; margin-top:20px;">Karlsruhe Hauptbahnhof und weiter Haltestellen bald verfübar!</p>
+
   </div>
 
 <script>
@@ -349,7 +439,7 @@ updateCountdowns();
 </script>
 
 <div class="credits">
-  <p><b>Mitgewirkt an diesem Projekt:</b> Elias</p>
+  <p><b>Kommentare:</b>S1: Hbf noch nicht verfügbar. S6 verzögert sich weiterhin!</p>
 </div>
 
   <footer>
