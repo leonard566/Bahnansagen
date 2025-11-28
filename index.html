@@ -121,15 +121,19 @@ function filterButtons() {
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
     <button onclick="showSection('info')">Informations-Ansagen</button>
-    <button onclick="showSection('s5')">S5 (AVG) Ansagen</button>
-    <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
-    <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
-    <button onclick="showSection('s6')" style="background-color:#FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
+    <button onclick="showSection('s3')" style="background-color:#C084FF;">🚧 S3 (S-Bahn RN) [BETA] Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s4')" style="background-color:#FF9800;">🚧 S4 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
+    <button onclick="showSection('s5')">S5 (AVG) Ansagen</button>
+    <button onclick="showSection('s6')" style="background-color:#FF9800;">🚧 S6 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s7')" style="background-color:#FF9800;">🚧 S7 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s8')" style="background-color:#FF9800;">🚧 S8 (AVG) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar  )</button>
-    <button onclick="showSection('s3')" style="background-color:#C084FF;">🚧 S3 (S-Bahn RN) [BETA] Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
+    <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
+    <button onclick="showSection('re14b')" style="background-color:#FF9800;">🚧 RE14b (DB Regio) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('re40')" style="background-color:#FF9800;">🚧 RE40 (DB Regio) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('rb76')" style="background-color:#FF9800;">🚧 RB76 (HHB) Ansagen 🚧 (Im Bau)</button>
   </div>
 
 <!-- Info-Ansagen -->
@@ -277,6 +281,49 @@ function filterButtons() {
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
+  <!-- S4 -->
+  <div id="s4" class="container" style="display:none; background-color:#FFF3E0; color:#fff;">
+    <h2>🚧 S4 (AVG) Ansagen</h2>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+    <button onclick="playAnsage('Böckingen Sonnenbrunnen (Bedarf)')">Böckingen Sonnenbrunnen (Bedarf)</button>
+    <button onclick="playAnsage('Böckingen Berufschulzentrum (Bedarf)')">Böckingen Berufschulzentrum (Bedarf)</button>
+    <button onclick="playAnsage('Böckingen West (Bedarf)')">Böckingen West (Bedarf)</button>
+    <button onclick="playAnsage('Leingarten Ost')">Leingarten Ost</button>
+    <button onclick="playAnsage('Leingarten')">Leingarten</button>
+    <button onclick="playAnsage('Leingarten Mitte (Bedarf)')">Leingarten Mitte (Bedarf)</button>
+    <button onclick="playAnsage('Leingarten West')">Leingarten West</button>
+    <button onclick="playAnsage('Schwaigern Ost (Bedarf)')">Schwaigern Ost (Bedarf)</button>
+    <button onclick="playAnsage('Schwaigern (Württ)')">Schwaigern (Württemberg)</button>
+    <button onclick="playAnsage('Schwaigern West (Bedarf)')">Schwaigern West (Bedarf)</button>
+    <button onclick="playAnsage('Stetten am Heuchelberg')">Stetten am Heuchelberg</button>
+    <button onclick="playAnsage('Gemmingen')">Gemmingen</button>
+    <button onclick="playAnsage('Gemmingen West (Bedarf)')">Gemmingen West (Bedarf)</button>
+    <button onclick="playAnsage('Eppingen')">Eppingen</button>
+    <button onclick="playAnsage('Eppingen West (Bedarf)')">Eppingen West (Bedarf)</button>
+    <button onclick="playAnsage('Sulzbach')">Sulzbach</button>
+    <button onclick="playAnsage('Zaisenhausen')">Zaisenhausen</button>
+    <button onclick="playAnsage('Flehingen')">Flehingen</button>
+    <button onclick="playAnsage('Oberderdingen-Flehingen')">Oberderdingen-Flehingen</button>
+    <button onclick="playAnsage('Bauerbach')">Bauerbach</button>
+    <button onclick="playAnsage('Gölshausen Industriegebiet (Bedarf)')">Gölshausen Industriegebiet (Bedarf)</button>
+    <button onclick="playAnsage('Gölshausen')">Gölshausen</button>
+    <button onclick="playAnsage('Bretten Kupferhälde (Bedarf)')">Bretten Kupferhälde (Bedarf)</button>
+    <button onclick="playAnsage('Bretten Schulzentrum')">Bretten Schulzentrum</button>
+    <button onclick="playAnsage('Bretten Wannenweg')">Bretten Wannenweg</button>
+    <button onclick="playAnsage('Bretten Stadtmitte')">Bretten Stadtmitte</button>
+    <button onclick="playAnsage('Bretten (Baden)')">Bretten (Baden)</button>
+    <button onclick="playAnsage('Bretten-Rinklingen (Bedarf)')">Bretten-Rinklingen (Bedarf)</button>
+    <button onclick="playAnsage('Dürrenbüchig (Bedarf)')">Dürrenbüchig (Bedarf)</button>
+    <button onclick="playAnsage('Wössingen Ost (Bedarf)')">Wössingen Ost (Bedarf)</button>
+    <button onclick="playAnsage('Wössingen (Bedarf)')">Wössingen (Bedarf)</button>
+    <button onclick="playAnsage('Jöhlingen (Bedarf)')">Jöhlingen (Bedarf)</button>
+    <button onclick="playAnsage('Jöhlingen West')">Jöhlingen West</button>
+    <button onclick="playAnsage('Berghausen-Hummelberg (Bedarf)')">Berghausen-Hummelberg (Bedarf)</button>
+    <button onclick="playAnsage('Grötzingen Oberraustraße')">Grötzingen Oberraustraße</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
   <!-- S1 -->
 <div id="s1" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S1 (AVG) Ansagen</h2>
@@ -357,6 +404,27 @@ function filterButtons() {
   <!-- S8 -->
   <div id="s8" class="container" style="display:none; background-color:#FF9800; color:#fff;">
     <h2>🚧 S8 (AVG) Ansagen</h2>
+    <p>Im Bau – bald verfügbar!</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- RE14b -->
+  <div id="re14b" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 RE14b (DB Regio) Ansagen</h2>
+    <p>Im Bau – bald verfügbar!</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- RE40 -->
+  <div id="re40" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 RE40 (DB Regio) Ansagen</h2>
+    <p>Im Bau – bald verfügbar!</p>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
+  <!-- RE76 -->
+  <div id="re76" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+    <h2>🚧 RE76 (HHB) Ansagen</h2>
     <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
@@ -463,6 +531,7 @@ updateCountdowns();
 
 <div class="credits">
   <p><b>Kommentare: </b>S1: Hbf noch nicht verfügbar. S6 verzögert sich weiterhin!</p>
+  <p><b>Kontakt: </b>leonardklinger@outlook.de</p>
 </div>
 
   <footer>
