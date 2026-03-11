@@ -715,7 +715,7 @@ updateCountdowns();
     &copy; 2026 Leonard Klinger – Alle Rechte vorbehalten.
   </footer>
 
-  <audio id="gong" src="./avg-gong1.mp3"></audio>
+  <audio id="gong" src="./sounds/avg-gong1.mp3"></audio>
   <audio id="audio"></audio>
 
   <script>
@@ -731,7 +731,7 @@ updateCountdowns();
       gong.currentTime = 0;
       gong.play().then(() => {
         gong.onended = () => {
-          audio.src = "./" + name + ".mp3";
+          audio.src = "./sounds/" + name + ".mp3";
           audio.play().catch(err => console.log("Fehler beim Abspielen:", err));
         };
       }).catch(err => console.log("Fehler beim Gong:", err));
