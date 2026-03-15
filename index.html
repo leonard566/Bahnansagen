@@ -127,6 +127,13 @@
   border-radius: 8px;
 }
 
+.meldungen-container {
+  max-height: 200px;      /* maximale Höhe */
+  overflow-y: auto;       /* Scrollbar wenn nötig */
+  margin: 15px auto;
+  max-width: 800px;
+}
+
   </style>
 
 
@@ -149,6 +156,8 @@ function filterButtons() {
 
 <h1>🎤 Zug-Ansagen System</h1>
 
+<div class="meldungen-container">
+
 <div class="nachrichten-box">
   📢 Willkommen im Zug-Ansagen-System.
   <br>Karlsruhe/Baden-Württemberg</br>
@@ -158,6 +167,12 @@ function filterButtons() {
   📢 Neu:
   Linie S52
   <br>Veränderungen Linie S3</br>
+</div>
+
+<div class="stoerungen-box">
+  📢 Systemstörung
+</div>
+
 </div>
 
   <!-- Hauptmenü -->
