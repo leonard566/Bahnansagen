@@ -154,6 +154,12 @@ function filterButtons() {
   <br>Karlsruhe/Baden-Württemberg</br>
 </div>
 
+<div class="nachrichten-box">
+  📢 Neu:
+  <br>Linie S52</br>
+  <br>Veränderungen Linie S3</br>
+</div>
+
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
     <button onclick="showSection('info')">Informations-Ansagen</button>
@@ -721,14 +727,67 @@ function filterButtons() {
   <!-- S3 -->
   <div id="s3" class="container" style="display:none; background-color:#C084FF; color:#fff;">
     <h2>🚧 S3 (S-Bahn RN) [BETA] Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p>Im Bau – teilweise verfügbar!</p><p>Alle Haltestellen bis auf der Abschnitt Karlsruhe - Weingarten sind unvolständig!</p>
 
-<div class="label">Karlsruhe Hauptbahnhof</div>
-<button onclick="playAnsage('Hbf Begrüßung -MA')">Ziel Mannheim</button>
-<button onclick="playAnsage('Hbf Begrüßung -GER-KA')">Ziel Karlsruhe über Germersheim</button>
+<div class="label">Karlsruhe Hauptbahnhof (Richtung Bruchsal)</div>
+<button onclick="playAnsage('Begrüßung -HD')">Begrüßung (nach Heidelberg)</button>
+<button onclick="playAnsage('Begrüßung -MA')">Begrüßung (nach Mannheim)</button>
+<button onclick="playAnsage('Begrüßung -GER')">Begrüßung (nach Germersheim)</button>
+<button onclick="playAnsage('Begrüßung -GER-KA')">Begrüßung (nach Karlsruhe via. Germ.)</button>
+<button onclick="playAnsage('Begrüßung -GER-RBR')">Begrüßung (nach Bruchsal via. Germ.)</button>
+<p></p>
+<button onclick="playAnsage('(S3) KA Ank-E')">Ankündigung Karlsruhe Hbf (Fahrtende)</button>
 
 <div class="label">Karlsruhe-Durlach</div>
-<button>Noch nichts..</button>
+<button onclick="playAnsage('(S3) Durlach Ankü')">Ankündigung KA-Durlach</button>
+<button onclick="playAnsage('S3-Durlach-Links')">Durlach Links</button>
+<button onclick="playAnsage('S3-Durlach-Rechts')">Durlach Rechts</button>
+
+<div class="label">Weingarten (Baden)</div>
+<button onclick="playAnsage('S3-Weingarten-L')">Weingarten Links</button>
+<button onclick="playAnsage('S3-Weingarten-R')">Weingarten Rechts</button>
+<button onclick="playAnsage('Bahnsteig Höhe')">Hinweis: Bahnsteig Höhe</button>
+
+<div class="label">Bruchsal</div>
+<button onclick="playAnsage('(S3) Bruchsal Ankü')">Ankündigung Bruchsal</button>
+
+<div class="label">Bad Schönborn-Kronau</div>
+<button onclick="playAnsage('(S3) BAD-S.B. Ankü')">Ankündigung Bad Schönborn-Kronau</button>
+
+<div class="label">Wiesloch-Walldorf</div>
+<button onclick="playAnsage('(S3) Wi-Wa Ankü')">Ankündigung Wiesloch-Walldorf</button>
+
+<div class="label">Heidelberg HAuptbahnhof</div>
+<button onclick="playAnsage('(S3) HD Ankü')">Ankündigung Heidelberg</button>
+<button onclick="playAnsage('(S3) HD Ank-E')">Ankündigung Heidelberg (Fahrtende)</button>
+
+<div class="label">Mannheim Hauptbahnhof</div>
+<button onclick="playAnsage('(S3) MA Ankü')">Ankündigung Mannheim</button>
+<button onclick="playAnsage('(S3) MA Ank-E')">Ankündigung Mannheim (Fahrtende)</button>
+
+<div class="label">Ludwigshafen (Rhein)</div>
+<button onclick="playAnsage('(S3) LU Ankü')">Ankündigung Ludwigshafen</button>
+
+<div class="label">Schifferstadt</div>
+<button onclick="playAnsage('(S3) Schiff Ankü')">Ankündigung Schifferstadt</button>
+
+<div class="label">Speyer</div>
+<button onclick="playAnsage('(S3) Spey Ankü')">Ankündigung Speyer</button>
+
+<div class="label">Germersheim</div>
+<button onclick="playAnsage('(S3) GER Ankü')">Ankündigung Germersheim </button>
+<button onclick="playAnsage('(S3) GER Ank-E')">Ankündigung Germersheim (Fahrtende)</button>
+<button onclick="playAnsage('(S3) GER Ank-RBR')">Ankündigung Germersheim, weiter Bruchsal</button>
+
+<div class="label">Wörth am Rhein</div>
+<button onclick="playAnsage('(S3) WÖ Ankü')">Ankündigung Wörth</button>
+
+<div class="label">Karlsruhe Hauptbahnhof (Richtung Wörth)</div>
+<button onclick="playAnsage('(S3) Spey Ankü')">Ankündigung Karlsruhe Hbf (Fahrtende)</button>
+<p></p>
+<button onclick="playAnsage('(S3) Begrüßung nach GER')">Begrüßung (nach Germersheim)</button>
+<button onclick="playAnsage('(S3) Begrüßung nach GER-KA')">Begrüßung (nach Karlsruhe via. Germ.)</button>
+<button onclick="playAnsage('(S3) Begrüßung nach GER-RBR')">Begrüßung (nach Bruchsal via. Germ.)</button>
 
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
