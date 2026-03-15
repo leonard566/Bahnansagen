@@ -119,6 +119,17 @@
   font-size: 16px;
 }
 
+.stoerung-box {
+  background-color: #d32f2f;
+  color: white;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+}
+
   </style>
 
 
@@ -134,6 +145,16 @@ function filterButtons() {
     btn.style.display = text.includes(filter) ? "block" : "none";
   });
 }
+
+function stoerungAn(text) {
+  const box = document.getElementById("stoerung");
+  box.innerText = "⚠️ Störung: " + text;
+  box.style.display = "block";
+}
+
+function stoerungAus() {
+  document.getElementById("stoerung").style.display = "none";
+}
 </script>
 
 <body>
@@ -144,6 +165,10 @@ function filterButtons() {
   <b>📢 Nachrichten:</b><br>
   Willkommen im Zug-Ansagen-System.<br>
   <br>Region Karlsruhe/Baden-Württemberg!</br>
+</div>
+
+  <div id="stoerung" class="stoerung-box" style="display:none;">
+  ⚠️ Störung: Aufgrund einer Systemstörung kann es zu Verzögerungen kommen.
 </div>
 
   <!-- Hauptmenü -->
