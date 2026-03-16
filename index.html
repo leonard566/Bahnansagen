@@ -144,7 +144,7 @@
 }
 
 footer a {
-  color: #4CAF50;
+  color: #4a9cfa;
   text-decoration: none;
   font-weight: bold;
 }
@@ -774,7 +774,7 @@ function filterButtons() {
   <!-- S3 -->
   <div id="s3" class="container" style="display:none; background-color:#C084FF; color:#fff;">
     <h2>🚧 S3 (S-Bahn Rhein-Neckar) [BETA] Ansagen</h2>
-    <p>Im Bau – teilweise verfügbar!</p><p>Alle Haltestellen bis auf der Abschnitt Karlsruhe - Weingarten sind unvollständig!</p>
+    <p>Im Bau – teilweise verfügbar!</p><p>Alle Haltestellen bis auf der Abschnitt Karlsruhe - Stettfeld-Weiher sind unvollständig!</p>
 
 <div class="label">Karlsruhe Hauptbahnhof (Richtung Bruchsal)</div>
 <button onclick="playAnsage('Begrüßung -HD')">Begrüßung (nach Heidelberg)</button>
@@ -795,8 +795,28 @@ function filterButtons() {
 <button onclick="playAnsage('S3-Weingarten-R')">Weingarten Rechts</button>
 <button onclick="playAnsage('Bahnsteig Höhe')">Hinweis: Bahnsteig Höhe</button>
 
+<div class="label">Untegrombach</div>
+<button onclick="playAnsage('Untegr_L')">Untegrombach Links</button>
+<button onclick="playAnsage('Untergr_R')">Untegrombach Rechts</button>
+<button onclick="playAnsage('Bahnsteig Höhe')">Hinweis: Bahnsteig Höhe</button>
+
+<div class="label">Bruchsal Gerwerbliches Bildungszentrum</div>
+<button onclick="playAnsage('Br-GBZ_L')">Bruchsal GBZ Links</button>
+<button onclick="playAnsage('BR-GBZ_R')">Bruchsal GBZ Rechts</button>
+<button onclick="playAnsage('Bahnsteig Höhe')">Hinweis: Bahnsteig Höhe</button>
+
 <div class="label">Bruchsal</div>
 <button onclick="playAnsage('(S3) Bruchsal Ankü')">Ankündigung Bruchsal</button>
+<button onclick="playAnsage('Bruchsal-L')">Bruchsal GBZ Links</button>
+<button onclick="playAnsage('bruchsal-R')">Bruchsal GBZ Rechts</button>
+
+<div class="label">Ubstadt-Weiher</div>
+<button onclick="playAnsage('UW-L')">Ubstadt-Weiher Links</button>
+<button onclick="playAnsage('UW-R')">Ubstadt-Weiher Rechts</button>
+
+<div class="label">Stettfeld-Weiher</div>
+<button onclick="playAnsage('Stettfeld-W_L')">Stettfeld-Weiher Links</button>
+<button onclick="playAnsage('Stetfeld-W_R')">Stettfeld-Weiher Rechts</button>
 
 <div class="label">Bad Schönborn-Kronau</div>
 <button onclick="playAnsage('(S3) BAD-S.B. Ankü')">Ankündigung Bad Schönborn-Kronau</button>
