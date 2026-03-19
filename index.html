@@ -197,6 +197,14 @@ function filterButtons() {
 </div>
 
 <div class="nachrichten-box">
+  📢 <u>Neu:</u>
+  <br>Linien S7, S1 vollständig</br>
+  <br>Linie S4 im Bereich Karlsruhe</br>
+
+    <span class="box-info">bald!</span>
+</div>
+
+<div class="nachrichten-box">
   📢 <u>Bald - ab April:</u>
   <br>Linien S7, S1 & S11 vollständig</br>
   <br>Linie RE1 (Arverio)</br>
@@ -433,13 +441,27 @@ function filterButtons() {
     <button onclick="playAnsage('Jöhlingen West')">Jöhlingen West</button>
     <button onclick="playAnsage('Berghausen-Hummelberg (Bedarf)')">Berghausen-Hummelberg (Bedarf)</button>
     <button onclick="playAnsage('Grötzingen Oberraustraße')">Grötzingen Oberraustraße</button>
+    <button onclick="playAnsage('KA-Grö_S4')">Karlsruhe-Grötzingen</button>
+    <button onclick="playAnsage('Durlach Bf (S5)')">Karlsruhe-Durlach</button>
+    <button onclick="playAnsage('Untermühlstraße (S5)')">Untermühlstraße</button>
+    <button onclick="playAnsage('Weinweg')">Weinweg</button>
+    <button onclick="playAnsage('Tulla VBK (S5)')">Tullastr./Alter Schlachthof</button>
+    <button onclick="playAnsage('Gottesauer Platz')">Gottesauer Platz/BGV</button>
+    <button onclick="playAnsage('Durlacher Tor')">Durlacher Tor/KIT-Campus Süd</button>
+    <button onclick="playAnsage('Kronen (S4)')">Kronenplatz</button>
+    <button onclick="playAnsage('Markt pyr')">Marktplatz (Pyramide)</button>
+    <button onclick="playAnsage('Ettlinger Tor (S1)')">Ettlinger Tor/Staatstheater</button>
+    <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
+    <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
+    <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
+    <button onclick="playAnsage('HBF Vpltz')">Hauptbahnhof (Vorplatz)</button>
+    <button onclick="playAnsage('Albtalbf (S4)')">Albtalbahnhof (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
   <!-- S1 -->
-<div id="s1" class="container" style="display:none; background-color:#FFF3E0;">
-    <h2>🚧 S1 (AVG) Ansagen</h2>
-    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+  <div id="s1" class="container" style="display:none;">
+    <h2>S1 (AVG) Ansagen</h2>
 
     <h3>Verfügbare Ansagen</h3>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
@@ -465,7 +487,7 @@ function filterButtons() {
     <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
-    <button disabled class="im-bau" disabled>🚧 Hauptbahnhof (Im Bau)</button>
+    <button onclick="playAnsage('HBF Vpltz')">Hauptbahnhof (Vorplatz)</button>
     <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
     <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
     <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
@@ -507,9 +529,35 @@ function filterButtons() {
 
 
   <!-- S7 -->
-  <div id="s7" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+<div id="s7" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 S7 (AVG) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
+    <p style="color:#E65100;"><b>Im Bau – einige Ansagen bereits verfügbar!</b></p>
+
+    <h3>Verfügbare Ansagen</h3>
+    <button disabled class="im-bau" disabled>🚧 Achern (Im Bau)</button>
+    <button onclick="playAnsage('Bühl (Bad)')">Bühl (Baden)</button>
+    <button onclick="playAnsage('Rebland (B)')">Baden-Baden Rebland (Bedarf)</button>
+    <button onclick="playAnsage('Sinz')">Sinzheim</button>
+    <button onclick="playAnsage('Sinz Nord')">Sinzheim Nord</button>
+    <button onclick="playAnsage('BADBAD')">Baden-Baden</button>
+    <button onclick="playAnsage('Haueneberstein (Bedarf)')">Baden-Baden Haueneberstein (Bedarf)</button>
+    <button disabled class="im-bau" disabled>🚧 Rastatt (Im Bau)</button>
+    <button onclick="playAnsage('Ötigheim')">Ötigheim</button>
+    <button onclick="playAnsage('Bietigheim')">Bietigheim (Baden)</button>
+    <button onclick="playAnsage('Durmersheim (S8)')">Durmersheim</button>
+    <button onclick="playAnsage('Durmersheim Nord')">Durmersheim Nord</button>
+    <button onclick="playAnsage('Forchheim (KA)')">Forchheim (b. KA)</button>
+    <button disabled class="im-bau" disabled>🚧 KA Albtalbahnhof (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 KA Hbf Vorplatz (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Poststraße (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Augartenstraße (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Kongresszentrum (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Ettlinger Tor (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Marktplatz (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Kronenplatz (U) (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Durlacher Tor/KIT (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Gottesauer Platz/BGV (Im Bau)</button>
+    <button disabled class="im-bau" disabled>🚧 Tullastraße (Im Bau)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
@@ -739,7 +787,7 @@ function filterButtons() {
     <button onclick="playAnsage('Dammerstock')">Dammerstock</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1 Stadteinwärts)')">Albtalbahnhof (Stadteinwärts)</button>
     <button onclick="playAnsage('KA Albtalbahnhof (S1)')">Albtalbahnhof</button>
-    <button disabled class="im-bau" disabled>🚧 Hauptbahnhof (Im Bau)</button>
+    <button onclick="playAnsage('HBF Vpltz')">Hauptbahnhof (Vorplatz)</button>
     <button onclick="playAnsage('Poststraße (S1)')">Poststraße</button>
     <button onclick="playAnsage('Augartenstraße')">Augartenstraße</button>
     <button onclick="playAnsage('Kongresszentrum')">Kongresszentrum</button>
