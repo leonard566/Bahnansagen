@@ -6,56 +6,60 @@
   <title>Zug-Ansagen System</title>
   <style>
 
-#wartung-seite {
-  display: none;
+/* Wartungsseite */
+#maintenance {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff; /* weiß */
-  z-index: 9999;
-
+  background-color: #f4f4f4; /* Weiß/grau */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
-/* Box */
-.wartung-box {
-  background: #f9f9f9;
+/* Karte */
+.maintenance-card {
+  background: #ffffff;
   padding: 40px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
   max-width: 400px;
-  border: 1px solid #ddd;
 }
 
 /* Titel */
-.wartung-box h2 {
-  color: #FF9800;
-  margin-bottom: 10px;
+.maintenance-card h1 {
+  color: #ff9800;
 }
 
-/* Untertitel */
-.subtitle {
-  color: #777;
-  margin-bottom: 20px;
+/* Button */
+.maintenance-card button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.maintenance-card button:hover {
+  background: #e68900;
 }
 
 /* Status */
 .status {
-  margin: 20px 0;
+  margin-top: 15px;
   font-weight: bold;
-  color: #444;
 }
 
 /* Blinkender Punkt */
 .dot {
   height: 10px;
   width: 10px;
-  background-color: #FF9800;
+  background-color: #ff9800;
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
@@ -66,88 +70,6 @@
   0% { opacity: 1; }
   50% { opacity: 0.2; }
   100% { opacity: 1; }
-}
-
-/* Button */
-.wartung-box button {
-  margin-top: 20px;
-  background-color: #FF9800;
-}
-
-.wartung-box button:hover {
-  background-color: #e68900;
-}
-
-#wartung-seite {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ffffff; /* weiß */
-  z-index: 9999;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Box */
-.wartung-box {
-  background: #f9f9f9;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-  max-width: 400px;
-  border: 1px solid #ddd;
-}
-
-/* Titel */
-.wartung-box h1 {
-  color: #FF9800;
-  margin-bottom: 8px;
-}
-
-/* Untertitel */
-.subtitle {
-  color: #777;
-  margin-bottom: 20px;
-}
-
-/* Status */
-.status {
-  margin: 20px 0;
-  font-weight: bold;
-  color: #444;
-}
-
-/* Blinkender Punkt */
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: #FF9800;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.2; }
-  100% { opacity: 1; }
-}
-
-/* Button */
-.wartung-box button {
-  margin-top: 20px;
-  background-color: #FF9800;
-}
-
-.wartung-box button:hover {
-  background-color: #e68900;
 }
 
     footer {
@@ -387,6 +309,7 @@ function filterButtons() {
 
 </div>
 
+<div id="app">
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
     <button onclick="showSection('info')">Informations-Ansagen</button>
@@ -1104,6 +1027,24 @@ function filterButtons() {
 
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
+
+</div>
+
+  <div id="maintenance">
+  <div class="maintenance-card">
+    <h1>🚧 Wartungsarbeiten</h1>
+    <p>Zug-Ansagen System</p>
+
+    <p>Das System wird aktuell aktualisiert.<br>
+    Bitte haben Sie einen Moment Geduld.</p>
+
+    <p class="status">
+      <span class="dot"></span> System wird gewartet...
+    </p>
+
+    <button onclick="location.reload()">🔄 Neu laden</button>
+  </div>
+</div>
 
 
 <div class="credits">
