@@ -241,12 +241,14 @@ footer a:hover {
 
 <script>
 
-  let wartung = true;
+const maintenanceMode = true; // EIN/AUS
 
-window.onload = function(){
-  if(wartung){
-    document.getElementById("wartung-seite").style.display = "block";
-  }
+if (maintenanceMode) {
+  document.getElementById("app").style.display = "none";
+  document.getElementById("maintenance").style.display = "flex";
+} else {
+  document.getElementById("app").style.display = "block";
+  document.getElementById("maintenance").style.display = "none";
 }
 
 function filterButtons() {
