@@ -173,6 +173,9 @@ footer a:hover {
 </head>
 
 <script>
+
+  let wartung = true; // true = Wartungsseite aktiv
+
 function filterButtons() {
   const filter = document.getElementById("search").value.toLowerCase();
   document.querySelectorAll("button").forEach(btn => {
@@ -184,6 +187,14 @@ function filterButtons() {
 </script>
 
 <body>
+
+  <div id="wartung-seite" style="display:none; text-align:center; padding:50px;">
+  <h1>🚧 Wartungsarbeiten</h1>
+  <p>Das System ist aktuell nicht verfügbar.</p>
+  <p>Bitte später erneut versuchen.</p>
+
+  <button onclick="reloadSeite()">🔄 Neu laden</button>
+</div>
 
 <h1>🎤 Zug-Ansagen System</h1>
 
@@ -945,6 +956,18 @@ function filterButtons() {
   <audio id="audio"></audio>
 
   <script>
+
+    window.onload = function(){
+  if(wartung){
+    document.getElementById("main-menu").style.display = "none";
+    document.getElementById("wartung-seite").style.display = "block";
+  }
+}
+
+function reloadSeite(){
+  location.reload();
+}
+
     document.body.addEventListener("click", () => {
       const gong = document.getElementById("gong");
       gong.play().then(() => gong.pause());
