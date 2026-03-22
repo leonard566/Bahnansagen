@@ -188,7 +188,13 @@ footer a:hover {
 
 <script>
 
-  let wartung = true; // true = Wartungsseite aktiv
+  let wartung = true;
+
+window.onload = function(){
+  if(wartung){
+    document.getElementById("wartung-seite").style.display = "block";
+  }
+}
 
 function filterButtons() {
   const filter = document.getElementById("search").value.toLowerCase();
@@ -969,14 +975,6 @@ function filterButtons() {
   <audio id="audio"></audio>
 
   <script>
-
-let wartung = true;
-
-window.onload = function(){
-  if(wartung){
-    document.getElementById("wartung-seite").style.display = "block";
-  }
-}
 
 function reloadSeite(){
   location.reload();
