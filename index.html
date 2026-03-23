@@ -229,7 +229,7 @@ function filterButtons() {
   <!-- Hauptmenü -->
   <div id="main-menu" class="container">
     <button onclick="showSection('info')">Informations-Ansagen</button>
-    <button onclick="showSection('s1')" style="background-color:#FF9800;">🚧 S1 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
+    <button onclick="showSection('s1')">S1 (AVG) Ansagen</button>
     <button onclick="showSection('s3')" style="background-color:#C084FF;">🚧 S3 (S-Bahn RN) [BETA] Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('s4')" style="background-color:#FF9800;">🚧 S4 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s5')">S5 (AVG) Ansagen</button>
@@ -474,8 +474,6 @@ function filterButtons() {
   <!-- S1 -->
   <div id="s1" class="container" style="display:none;">
     <h2>S1 (AVG) Ansagen</h2>
-
-    <h3>Verfügbare Ansagen</h3>
     <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
     <button onclick="playAnsage('Bad Herrenalb (Fahrtende)')">Bad Herrenalb (Fahrtende)</button>
     <button onclick="playAnsage('Bad Herrenalb Kullenmühle (Bedarf)')">Bad Herrenalb Kullenmühle (Bedarf)</button>
@@ -534,9 +532,6 @@ function filterButtons() {
     <button onclick="playAnsage('Hochstetten Altenheim (Bedarf)')">Hochstetten Altenheim (Bedarf)</button>
     <button onclick="playAnsage('Hochstetten (Fahrtende)')">Hochstetten (Fahrtende)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
-
-    <p style="color:gray; margin-top:20px;">Karlsruhe Hauptbahnhof bald verfübar!</p>
-
   </div>
 
 
