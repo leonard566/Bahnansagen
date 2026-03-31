@@ -216,6 +216,14 @@ function filterButtons() {
     <span class="box-info">neu!</span>
 </div>
 
+<div class="nachrichten-box">
+  📢 <u>Neu:</u>
+  <br>Entfernen der Linie RE14b</br>
+  <br>Linie S8: 2,5 Lücken gefüllt</br>
+
+    <span class="box-info">neu!</span>
+</div>
+
 </div>
 
   <!-- Hauptmenü -->
@@ -235,7 +243,6 @@ function filterButtons() {
     <button onclick="showSection('s52')" style="background-color:#FF9800;">🚧 S52 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('re1')" style="background-color:#FF9800;">🚧 RE1 (ARV) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re6a')" style="background-color:#FF9800;">🚧 RE6a (DB Regio) Ansagen 🚧 (Im Bau)</button>
-    <button onclick="showSection('re14b')" style="background-color:#FF9800;">🚧 RE14b (DB Regio) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re40')" style="background-color:#C084FF;">RE40 (DB Regio) [BETA] Ansagen</button>
     <button onclick="showSection('rb76')" style="background-color:#FF9800;">🚧 RB76 (HHB) Ansagen 🚧 (Im Bau)</button>
   </div>
@@ -599,9 +606,9 @@ function filterButtons() {
     <button onclick="playAnsage('Forbach im Schw')">Forbach (Schwarzwald)</button>
     <button onclick="playAnsage('Gausbach (Bedarf)')">Gausbach (Bedarf)</button>
     <button onclick="playAnsage('Langenbrand (Bedarf)')">Langenbrand (Bedarf)</button>
-    <button disabled class="im-bau" disabled>🚧 Au im Murgtal (Im Bau)</button>
+    <button onclick="playAnsage('Au (Murgtal) (B)')">Au im Murgtal (Bedarf)</button>
     <button onclick="playAnsage('Weisenbach')">Weisenbach</button>
-    <button disabled class="im-bau" disabled>🚧 Hilpertsau (Im Bau)</button>
+    <button onclick="playAnsage('Hilperstau (S8)')">Hilpertsau</button>
     <button onclick="playAnsage('Obertsrot (Bedarf)')">Obertsrot (Bedarf)</button>
     <button onclick="playAnsage('Gernsbach Mitte')">Gernsbach Mitte</button>
     <button disabled class="im-bau" disabled>🚧 Gernsbach (Im Bau)</button>
@@ -621,7 +628,8 @@ function filterButtons() {
     <button onclick="playAnsage('Durmersheim (S8)')">Durmersheim</button>
     <button onclick="playAnsage('Durmersheim Nord')">Durmersheim Nord</button>
     <button onclick="playAnsage('Forchheim (KA)')">Forchheim (b. KA)</button>
-    <button disabled class="im-bau" disabled>🚧 KA Albtalbahnhof (Im Bau)</button>
+    <button onclick="playAnsage('Albtalbf (S8_ausw)')">KA Albtalbahnhof (->Rastatt)</button>
+    <button disabled class="im-bau" disabled>🚧 KA Albtalbahnhof (stadteinwärts) (Im Bau)</button>
     <button disabled class="im-bau" disabled>🚧 KA Hbf Vorplatz (Im Bau)</button>
     <button disabled class="im-bau" disabled>🚧 Poststraße (Im Bau)</button>
     <button disabled class="im-bau" disabled>🚧 Augartenstraße (Im Bau)</button>
@@ -727,13 +735,6 @@ function filterButtons() {
     <button disabled class="im-bau" disabled>🚧 Mössingen (Im Bau)</button>
     <button disabled class="im-bau" disabled>🚧 Hechingen (Im Bau)</button>
     <button disabled class="im-bau" disabled>🚧 Balingen (Württ) (Im Bau)</button>
-    <button class="back-button" onclick="backToMenu()">← Zurück</button>
-  </div>
-
-  <!-- RE14b -->
-  <div id="re14b" class="container" style="display:none; background-color:#FF9800; color:#fff;">
-    <h2>🚧 RE14b (DB Regio) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
