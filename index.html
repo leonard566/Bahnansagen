@@ -210,18 +210,10 @@ function filterButtons() {
 
 <div class="nachrichten-box">
   📢 <u>Neu:</u>
-  <br>Linien S7, S1 vollständig</br>
-  <br>Linie S4 im Bereich Karlsruhe</br>
+  <br>Linien S51</br>
+  <br>Info-Ansage: Pünktliche Ankunft</br>
 
     <span class="box-info">neu!</span>
-</div>
-
-<div class="nachrichten-box">
-  📢 <u>Bald - ab April:</u>
-  <br>Linien S7 & S11 vollständig</br>
-  <br>Linie RE1 (Arverio)</br>
-
-    <span class="box-info">bald!</span>
 </div>
 
 </div>
@@ -239,6 +231,7 @@ function filterButtons() {
     <button onclick="showSection('s11')" style="background-color:#FF9800;">🚧 S11 (AVG) Ansagen 🚧 (Teilweise verfügbar  )</button>
     <button onclick="showSection('s31')">S31 (AVG) Ansagen</button>
     <button onclick="showSection('s32')">S32 (AVG) Ansagen</button>
+    <button onclick="showSection('s51')" style="background-color:#FF9800;">🚧 S51 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('s52')" style="background-color:#FF9800;">🚧 S52 (AVG) Ansagen 🚧 (Teilweise verfügbar)</button>
     <button onclick="showSection('re1')" style="background-color:#FF9800;">🚧 RE1 (ARV) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re6a')" style="background-color:#FF9800;">🚧 RE6a (DB Regio) Ansagen 🚧 (Im Bau)</button>
@@ -250,6 +243,7 @@ function filterButtons() {
 <!-- Info-Ansagen -->
   <div id="info" class="container" style="display:none;">
     <h2>Informations-Ansagen</h2>
+    <button onclick="playAnsage('Pünktliche Ankunft')">Pünktliche Ankunft</button>
     <button onclick="playAnsage('Verspätung 5')">Verspätung 5 Minuten</button>
     <button onclick="playAnsage('Verspätung 10')">Verspätung 10 Minuten</button>
     <button onclick="playAnsage('Verspätung 15')">Verspätung 15 Minuten</button>
@@ -664,6 +658,63 @@ function filterButtons() {
     <button onclick="playAnsage('Wörth (S52)')">Wörth (Rhein)</button>
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
+
+      <!-- S51 -->
+<div id="s52" class="container" style="display:none; background-color:#FFF3E0;">
+    <h2>🚧 S51 (AVG) Ansagen</h2>
+    <p style="color:#E65100;"><b>Im Bau – fast alle Ansagen bereits verfügbar!</b></p>
+
+    <button onclick="playAnsage('Begrüßung')">Begrüßung</button>
+    <button disabled class="im-bau" disabled>🚧 Germersheim (Im Bau)</button>
+    <button onclick="playAnsage('GER MitteRhein')">Germersheim Mitte/Rhein</button>
+    <button onclick="playAnsage('G SüdNolte (B)')">Germersheim Süd/Nolte (Bedarf)</button>
+    <button onclick="playAnsage('Sondernheim')">Sondernheim</button>
+    <button onclick="playAnsage('Bellheim AmMühlb (B)')">Bellheim Am Mühlbuckel (Bedarf)</button>
+    <button onclick="playAnsage('Bellheim')">Bellheim</button>
+    <button onclick="playAnsage('Rülzheim')">Rülzheim</button>
+    <button onclick="playAnsage('Rülzheim Fr (B)')">Rülzheim Freizeitzentrum (Bedarf)</button>
+    <button onclick="playAnsage('Rheinzabern')">Rheinzabern</button>
+    <button onclick="playAnsage('Rheinzabern Rappengasse (B)')">Rheinz. Rappengasse (Bedarf)</button>
+    <button onclick="playAnsage('Rheinzabern AlteRömerstr (B)')">Rheinz. Alte Römerstr. (Bedarf)</button>
+    <button onclick="playAnsage('Jockgrim')">Jockgrim</button>
+    <button onclick="playAnsage('WÖ Zügelstr (B)')">Wörth Zügelstraße (Bedarf)</button>
+    <button onclick="playAnsage('Wörth (S51)')">Wörth (Rhein)</button>
+    <button onclick="playAnsage('Maximiliansau West (Bedarf)')">Maximiliansau West (Bedarf)</button>
+    <button onclick="playAnsage('MAX Eisenbahnstr. (S51)(B)')">Maximiliansau Eisenbahnstr. (Bedarf)</button>
+    <button onclick="playAnsage('KA Rheinbergstr. (Stadteinwärts)')">Knielingen Rheinbergstr. (Stadteinwärts)</button>
+    <button onclick="playAnsage('KA Rheinbergstr.')">Knielingen Rheinbergstraße</button>
+    <button onclick="playAnsage('Eggensteiner Straße')">Eggensteiner Straße</button>
+    <button onclick="playAnsage('Herweghstraße')">Herweghstraße</button>
+    <button onclick="playAnsage('Siemens')">Siemens</button>
+    <button onclick="playAnsage('Mühlburg West')">Mühlburg West</button>
+    <button onclick="playAnsage('Starckstraße')">Starckstraße</button>
+    <button onclick="playAnsage('Lameyplatz (S5)')">Lameyplatz</button>
+    <button onclick="playAnsage('Entenfang (S5)')">Entenfang</button>
+    <button onclick="playAnsage('Philippstraße')">Philippstraße</button>
+    <button onclick="playAnsage('Händelstraße')">Händelstraße</button>
+    <button onclick="playAnsage('Yorckstraße (S5)')">Yorckstraße</button>
+    <button onclick="playAnsage('Mühlburger Tor (S5)')">Mühlburger Tor</button>
+    <button onclick="playAnsage('Euro (S5)')">Europaplatz</button>
+    <button onclick="playAnsage('Marktplatz (Kaiserstraße)')">Marktplatz (Kaiserstraße)</button>
+    <button onclick="playAnsage('Kronenplatz (S5)')">Kronenplatz</button>
+    <button onclick="playAnsage('Durlacher Tor')">Durlacher Tor/KIT-Campus Süd</button>
+    <button onclick="playAnsage('Gottesauer Platz')">Gottesauer Platz/BGV</button>
+    <button onclick="playAnsage('Tulla VBK (S5)')">Tullastr./Alter Schlachthof</button>
+    <button onclick="playAnsage('Weinweg')">Weinweg</button>
+    <button onclick="playAnsage('Untermühlstraße (S5)')">Untermühlstraße</button>
+    <button onclick="playAnsage('Durlach Bf (S5)')">Durlach Bahnhof</button>
+    <button onclick="playAnsage('Hubstraße (Bedarf)')">Hubstraße (Bedarf)</button>
+    <button onclick="playAnsage('KA Grötzingen')">Grötzingen</button>
+    <button onclick="playAnsage('Oberausstraße')">Oberausstraße</button>
+    <button onclick="playAnsage('Krappmühlenweg')">Krappmühlenweg</button>
+    <button onclick="playAnsage('Berghausen Pfinzbrücke (Bedarf)')">Berghausen Pfinzbrücke (Bedarf)</button>
+    <button onclick="playAnsage('Berghausen')">Berghausen</button>
+    <button onclick="playAnsage('Am Stadion (Bedarf)')">Am Stadion (Bedarf)</button>
+    <button onclick="playAnsage('Söllingen Reetzstr. (Bedarf)')">Söllingen Reetzstraße (Bedarf)</button>
+    <button onclick="playAnsage('Söllingen (b. Karlsruhe)(Fahrtende)')">Söllingen (b. Karlsruhe)(Fahrtende)</button>
+    <button class="back-button" onclick="backToMenu()">← Zurück</button>
+  </div>
+
 
   <!-- RE6a -->
   <div id="re6a" class="container" style="display:none; background-color:#FF9800; color:#fff;">
