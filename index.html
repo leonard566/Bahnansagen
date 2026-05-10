@@ -244,7 +244,7 @@ function filterButtons() {
     <button onclick="showSection('re1')" style="background-color:#FF9800;">🚧 RE1 (ARV) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re6a')" style="background-color:#FF9800;">🚧 RE6a (DB Regio) Ansagen 🚧 (Im Bau)</button>
     <button onclick="showSection('re40')" style="background-color:#C084FF;">RE40 (DB Regio) [BETA] Ansagen</button>
-    <button onclick="showSection('rb71')" style="background-color:#FF9800;">🚧 RB71 (DB Regio) Ansagen 🚧 (Im Bau)</button>
+    <button onclick="showSection('rb71')">RB71 (DB Regio) Ansagen</button>
     <button onclick="showSection('rb76')" style="background-color:#FF9800;">🚧 RB76 (HHB) Ansagen 🚧 (Im Bau)</button>
   </div>
 
@@ -826,10 +826,147 @@ function filterButtons() {
   </div>
 
     <!-- RB71 -->
-  <div id="rb71" class="container" style="display:none; background-color:#FF9800; color:#fff;">
+  <div id="rb71" class="container" style="display:none; background-color:#FFF3E0;">
     <h2>🚧 RB71 (DB Regio) Ansagen</h2>
-    <p>Im Bau – bald verfügbar!</p>
-    <p>Voraussichtlich im Mai</p>
+
+<div class="label">Bruchsal Bahnhof</div>
+<button onclick="playAnsage('RB71 Begrüßung')">Begrüßung</button>
+<p>Fahrtende</p>
+<button onclick="playAnsage('Bruchsal links')">Bruchsal (links)</button>
+<button onclick="playAnsage('Bruchsal rechts')">Bruchsal (links)</button>
+<p>Ankündigung</p>
+<button onclick="playAnsage('BRU')">Bruchsal</button>
+
+<div class="label">Bruchsal Tunnelstraße</div>
+<button onclick="playAnsage('MÜHL, Tunnelstr')">Tunnelstraße (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Tunnelstr')">Tunnelstraße (Bretten)</button>
+<button onclick="playAnsage('BRU, Tunnelstr')">Tunnelstraße (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Bruchsal Schlachthof</div>
+<button onclick="playAnsage('MÜHL, Schlachthof')">Schlachthof (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Schlachthof')">Schlachthof (Bretten)</button>
+<button onclick="playAnsage('BRU, BrSchlacht')">Schlachthof (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Heidelsheim Nord</div>
+<button onclick="playAnsage('MÜHL, Hdh Nord')">Nord (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Hdh Nord')">Nord (Bretten)</button>
+<button onclick="playAnsage('BRU, HdNord')">Nord (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Heidelsheim</div>
+<button onclick="playAnsage('MÜHL, Hdh')">Heidelsheim (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Hdh')">Heidelsheim (Bretten)</button>
+<button onclick="playAnsage('BRU, Heidel')">Heidelsheim (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Helmsheim</div>
+<button onclick="playAnsage('MÜHL, Helmsheim')">Helmsheim (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Helmsheim')">Helmsheim (Bretten)</button>
+<button onclick="playAnsage('BRU, helm')">Helmsheim (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Gondelsheim Schlossstadion</div>
+<button onclick="playAnsage('MÜHL, GSchloss')">Schlossstadion (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, GSchloss')">Schlossstadion (Bretten)</button>
+<button onclick="playAnsage('BRU, GSchloss')">Schlossstadion (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Gondelsheim</div>
+<button onclick="playAnsage('MÜHL, Gondel')">Gondelsheim (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, Gondel')">Gondelsheim (Bretten)</button>
+<button onclick="playAnsage('BRU, Gond')">Gondelsheim (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Diedelsheim</div>
+<button onclick="playAnsage('MÜHL, Diedel')">Diedelsheim (Mühlacker)</button>
+<button onclick="playAnsage('BRETT, DIedel')">Diedelsheim (Bretten)</button>
+<button onclick="playAnsage('BRU, Didel')">Diedelsheim (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Bretten Bahnhof</div>
+<p>Züge mit normalen Halt</p>
+<button onclick="playAnsage('BRU, links (Bretten)')">Bretten (links) (Ri Bruchsal)</button>
+<button onclick="playAnsage('BRU, rechts (Bretten)')">Bretten (rechts) (Ri Bruchsal)</button>
+<button onclick="playAnsage('MÜHL, links (Bretten)')">Bretten (links) (Ri Mühlacker)</button>
+<button onclick="playAnsage('MÜHL, rechts (Bretten)')">Bretten (rechts) (Ri Mühlacker)</button>
+<p>Begrüßung Pendel Bruchsal-Bruchsal</p>
+<button onclick="playAnsage('RB71 Begrüßung')">Begrüßung (Pendel)</button>
+<p>Ankündigung Pendel Bruchsal-Bruchsal</p>
+<button onclick="playAnsage('Bretten')"> Bretten (Fahrtende erwartet)</button>
+<p>Fahrtende Pendel Bruchsal-Bruchsal </p>
+<button onclick="playAnsage('BRETT links')">Bretten (links)</button>
+<button onclick="playAnsage('BRETT rechts')">Bretten (links)</button>
+
+<div class="label">Bretten-Rechberg</div>
+<button onclick="playAnsage('MÜHL, BrRechberg')">Rechberg (Mühlacker)</button>
+<button onclick="playAnsage('BRU, BrREchberg')">Rechberg (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Bretten-Ruit</div>
+<button onclick="playAnsage('MÜHL, BrRuit')">Ruit (Mühlacker)</button>
+<button onclick="playAnsage('BRU, BrRuit')">Ruit (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Knittlingen-Kleinvillars</div>
+<button onclick="playAnsage('MÜHL, Knitt')">Knittlingen-Kleinvillars (Mühlacker)</button>
+<button onclick="playAnsage('BRU, Knitt')">Knittlingen-Kleinvillars (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Ölbronn-Dürrn</div>
+<p>Richtung Mühlacker</p>
+<button onclick="playAnsage('MÜHL, Ölbr links')">Ölbronn-Dürrn (links)</button>
+<button onclick="playAnsage('MÜHL, Ölbr rechts')">Ölbronn-Dürrn (rechts)</button>
+<p>Richtung Bruchsal</p>
+<button onclick="playAnsage('BRU, Ölbr links')">Ölbronn-Dürrn (links)</button>
+<button onclick="playAnsage('BRU, Ölbr rechts')">Ölbronn-Dürrn (rechts)</button>
+
+<div class="label">Maulbronn West</div>
+<button onclick="playAnsage('MÜHL, Maulbr')">West (Mühlacker)</button>
+<button onclick="playAnsage('BRU, Maulbr')">West (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Ötisheim</div>
+<button onclick="playAnsage('MÜHL, Ötis')">Ötisheim (Mühlacker)</button>
+<button onclick="playAnsage('BRU, Ötis')">Ötisheim (Bruchsal)</button>
+<p>Ausstieg</p>
+<button onclick="playAnsage('Ausstieg links')">links</button>
+<button onclick="playAnsage('Ausstieg rechts')">rechts</button>
+
+<div class="label">Mühlacker Bahnhof</div>
+<p>Ankündigung</p>
+<button onclick="playAnsage('MÜHL')">Mühlacker</button>
+<p>Fahrtende</p>
+<button onclick="playAnsage('Mühlacker links')">Mühlacker (links)</button>
+<button onclick="playAnsage('Mühlacker rechts')">Mühlacker (links)</button>
+<p>Begrüßung</p>
+<button onclick="playAnsage('RB71 Begrüßung')">Begrüßung</button>
+
     <button class="back-button" onclick="backToMenu()">← Zurück</button>
   </div>
 
